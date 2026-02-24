@@ -4,6 +4,7 @@
 
 🎨 დიზაინის ფაილი: https://www.figma.com/design/K0iHmiSiMJuKxr5duOKvIC/CareerPath-Mentoring-task?node-id=0-1&p=f&t=1pMPopixadWEuR5q-0
 
+🔃 Trello სამუშაო გარემო: https://trello.com/b/EnRItCW6/shire-whispers-career-path
 💻 გამოსაყენებელი ტექნოლოგიები: HTML, Scss, GIT/Github.
 
 ---
@@ -26,6 +27,7 @@
 
 1. git add .
 2. git commit -m "" ( ბრჭყალებში მაქსიმალურად გასაგებად და დეტალურად ვწერთ რა შეიცვალა კოდში, სტილებში და ა.შ)
+3. git pull origin main მნიშვნელოვანია ეს კომიტი, რატა განახლებული კოდი მუდმივად გქონდეთ ხელმისაწვდომი თვქენს მოწყობილობებში
 
 💌 \*\* გვაქვს რამდენიმე სახის კომიტი:
 

@@ -1,24 +1,65 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-ol,
-ul {
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul,
+ol {
   list-style: none;
 }
 
-body {
-  width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+input[type=button]:is(button), input:is(button),
+button[type=button]:is(button),
+button:is(button),
+textarea[type=button]:is(button),
+textarea:is(button),
+select[type=button]:is(button),
+select:is(button) {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */

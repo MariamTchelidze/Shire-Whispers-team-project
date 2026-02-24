@@ -1,5 +1,11 @@
+@use "./base/reset" as *;
+@use "./abstract/mixins" as *;
 @use "variables" as *;
-@use "variables" as *;
-@use "variables" as *;
-
-// General styles starts here
+@use "./layout/header" as *;
+@use "./layout/career-path" as *;
+@use "./layout/about-us" as *;
+@use "./layout/our-services" as *;
+@use "./layout/stories" as *;
+@use "./layout/reviews" as *;
+@use "./layout/subscribe" as *;
+@use "./layout/footer" as *;
