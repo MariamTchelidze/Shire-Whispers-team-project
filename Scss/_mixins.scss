@@ -1,4 +1,4 @@
-@use "variables";
+@use "variables" as *;
 // button styles
 @mixin btn-styles {
   background-color: #052a44;
@@ -13,12 +13,12 @@
 @mixin play-btn {
   background-color: #ffffff;
   padding: 1.8rem;
-  box-shadow: variables.$video-box-shadow;
+  box-shadow: $video-box-shadow;
 }
 
 // input field styles
 @mixin input-field {
-  background-color: variables.$primary-bg-color;
+  background-color: $primary-bg-color;
   border-radius: 0.8rem;
   padding: 2rem 2.4rem;
 }
