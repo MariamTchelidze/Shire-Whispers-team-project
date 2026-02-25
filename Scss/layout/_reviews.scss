@@ -40,12 +40,14 @@
     justify-content: center;
   }
 
-  &_btn {
-    @include btn-styles;
+    &_btn {
+    @include hover-btn-styles;
+    color: #fff;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    padding: 1rem 2.4rem;
   }
 }
 
@@ -140,3 +142,5 @@
     }
   }
 }
+
+
