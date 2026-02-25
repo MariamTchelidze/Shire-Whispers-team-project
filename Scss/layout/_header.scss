@@ -2,3 +2,182 @@
 @use "../variables" as *;
 
 // Header styles goes here
+#menu-toggle,
+#change-theme {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.header-wrapper {
+  background-color: $primary-bg-color;
+  @include flex(row, space-between, center);
+  padding: 2rem 4rem;
+  position: relative;
+  .desktop-logo {
+    display: none;
+  }
+  .dark-theme-logo {
+    display: none;
+  }
+  .header-desktop-navigation {
+    display: none;
+  }
+  .header-right-wrapper {
+    @include flex(row, center, center, 2rem);
+    .desktop-signin-button {
+      display: none;
+    }
+
+    .dark-theme-icon {
+      display: none;
+    }
+
+    .light-theme-icon {
+      filter: invert(1);
+      cursor: pointer;
+      @media (min-width: 845px) {
+        filter: none;
+      }
+    }
+
+    // burger buttons styles
+    .close-btn {
+      display: none;
+    }
+
+    .burger-bar {
+      cursor: pointer;
+      @media (min-width: 845px) {
+        display: none;
+      }
+    }
+
+    .burger-menu {
+      display: none;
+    }
+    @media (min-width: 845px) {
+      .desktop-signin-button {
+        @include flex(row, center, center, 1rem);
+        .desktop-signin-lbl {
+          @include header-navigation-fonts;
+        }
+        #desktop-signin {
+          @include desktop-btn-styles;
+        }
+      }
+    }
+  }
+  @media (min-width: 845px) {
+    background-color: $footer-logo-color;
+    .light-theme-logo,
+    .dark-theme-logo {
+      display: none;
+    }
+    .desktop-logo {
+      display: block;
+    }
+    .header-desktop-navigation {
+      display: block;
+      .header-desktop-navigation-ul {
+        @include flex(row, center, center, 3rem);
+        .header-desktop-navigation-a {
+          @include header-navigation-fonts;
+        }
+      }
+    }
+  }
+}
+
+// Burger menu controller functionality
+#menu-toggle:checked ~ .burger-menu {
+  display: flex;
+  height: 100vh;
+  width: calc(100% + 1rem);
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  padding: 2.4rem;
+
+  @include flex(column, start, center, 3.5rem);
+
+  .toggle-menu-bar {
+    @include flex(column, center, center, 2rem);
+
+    .toggle-menu-bar-ul {
+      @include flex(column, center, center, 1.6rem);
+
+      .toggle-menu-bar-a {
+        @include toggle-fonts;
+      }
+    }
+
+    .sign-in-toggle {
+      @include flex(column, center, center, 2rem);
+
+      .toggle-sign-in {
+        @include toggle-fonts;
+      }
+
+      #signin {
+        @include hover-btn-styles;
+      }
+    }
+  }
+}
+#menu-toggle:checked + .bureger-label {
+  .burger-bar {
+    display: none;
+  }
+
+  .close-btn {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+// Light & Dark Color Theme Controller Functionality
+body:has(#change-theme:checked) {
+  background-color: $dark-theme-bg-color;
+
+  .header-wrapper {
+    background-color: $dark-theme-bg-color;
+
+    .dark-theme-logo {
+      display: block;
+      @media (min-width: 845px) {
+        display: none;
+      }
+    }
+    .light-theme-logo {
+      display: none;
+    }
+
+    .header-right-wrapper {
+      .dark-theme-icon {
+        display: block;
+        filter: invert(1);
+        cursor: pointer;
+      }
+
+      .light-theme-icon {
+        display: none;
+      }
+
+      .burger-bar {
+        filter: invert(1);
+      }
+      .burger-menu {
+        .toggle-menu-bar-a {
+          color: $secondary-text-color;
+        }
+        .toggle-sign-in {
+          color: $secondary-text-color;
+        }
+        #signin {
+          @include toggle-btn-styles;
+        }
+      }
+    }
+  }
+}

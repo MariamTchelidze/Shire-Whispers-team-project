@@ -10,3 +10,14 @@
 @use "./layout/reviews" as *;
 @use "./layout/subscribe" as *;
 @use "./layout/footer" as *;
+
+// General styles goes here
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: $primary-bg-color;
+  overflow-x: hidden;
+}
+html {
+  font-size: 62.5%;
+}
