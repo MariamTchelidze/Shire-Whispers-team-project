@@ -1,24 +1,92 @@
 @use "../variables" as *;
+
 // button styles
-@mixin btn-styles {
+@mixin hover-btn-styles {
   background-color: #052a44;
-  padding: 0.8rem 1.2rem;
+  padding: 1.5rem 3.6rem;
   border-radius: 0.8rem;
-  color: #ffffff;
+  color: $primary-bg-color;
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
 }
-
+@mixin transparent-btn-styles {
+  background-color: $primary-bg-color;
+  font-size: 1.4rem;
+  font-family: "Poppins-Medium", sans-serif;
+  color: $primary-text-color;
+  padding: 1.5rem 3.6rem;
+  border-radius: 0.8rem;
+}
+// desktop  button mixin
+@mixin desktop-btn-styles {
+  @include toggle-btn-styles();
+  @include poppins-16-semibold;
+  padding: 1.5rem 4.5rem;
+  border-radius: 0.8rem;
+  white-space: nowrap;
+}
+@mixin toggle-btn-styles {
+  background-color: $primary-bg-color;
+  color: $primary-text-color;
+}
 // play -video button styles
 @mixin play-btn {
-  background-color: #ffffff;
-  padding: 1.8rem;
+  background-color: $primary-bg-color;
+  padding: 1.5rem;
+  border-radius: 5rem;
+  @include flex(row, center, center);
   box-shadow: $video-box-shadow;
 }
-
+@mixin play-btn-hover {
+  background-color: $footer-logo-color;
+  border-radius: 5rem;
+  padding: 1.5rem;
+  @include flex(row, center, center);
+}
 // input field styles
 @mixin input-field {
   background-color: $primary-bg-color;
   border-radius: 0.8rem;
   padding: 2rem 2.4rem;
+}
+
+// Display flex - grid mixins
+@mixin flex($direction: row, $justify: center, $align: center, $gap: null) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  @if $gap != null {
+    gap: $gap;
+  }
+}
+
+// Font mixins
+@mixin main-heading-fonts {
+  font-size: 3.2rem;
+  font-family: "Poppins-Regular", sans-serif;
+  color: $main-heading-mobile-color;
+}
+@mixin mobile-p-16-fonts {
+  text-align: center;
+  font-size: 1.6rem;
+  font-family: "Poppins-Regular", sans-serif;
+  color: $primary-text-color;
+}
+
+@mixin toggle-fonts {
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 1.6rem;
+  color: $primary-text-color;
+  text-transform: capitalize;
+}
+@mixin header-navigation-fonts {
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 1.6rem;
+  color: $secondary-text-color;
+}
+@mixin poppins-16-semibold {
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 1.6rem;
+  color: $primary-text-color;
 }
