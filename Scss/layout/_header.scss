@@ -14,13 +14,16 @@
   @include flex(row, space-between, center);
   padding: 2rem 4rem;
   position: relative;
-  .desktop-logo {
-    display: none;
-  }
+  // .desktop-logo {
+  //   display: none;
+  // }
+  // .dark-theme-logo {
+  //   display: none;
+  // }
   .dark-theme-logo {
     display: none;
   }
-  .header-desktop-navigation {
+  .desktop-nav {
     display: none;
   }
   .header-right-wrapper {
@@ -71,17 +74,17 @@
   @media (min-width: 845px) {
     background-color: $footer-logo-color;
     .light-theme-logo,
-    .dark-theme-logo {
-      display: none;
-    }
-    .desktop-logo {
+    // .dark-theme-logo {
+    //   display: none;
+    // }
+    // .desktop-logo {
+    //   display: block;
+    // }
+    .desktop-nav {
       display: block;
-    }
-    .header-desktop-navigation {
-      display: block;
-      .header-desktop-navigation-ul {
+      .d-nav-list {
         @include flex(row, center, center, 3rem);
-        .header-desktop-navigation-a {
+        .list-a {
           @include header-navigation-fonts;
         }
       }
@@ -91,9 +94,10 @@
 
 // Burger menu controller functionality
 #menu-toggle:checked ~ .burger-menu {
+  background-color: $primary-bg-color;
   display: flex;
   height: 100vh;
-  width: calc(100% + 1rem);
+  width: calc(100% + 2rem);
   position: absolute;
   top: 6rem;
   left: 0;
@@ -168,6 +172,7 @@ body:has(#change-theme:checked) {
         filter: invert(1);
       }
       .burger-menu {
+        background-color: $dark-theme-bg-color;
         .toggle-menu-bar-a {
           color: $secondary-text-color;
         }

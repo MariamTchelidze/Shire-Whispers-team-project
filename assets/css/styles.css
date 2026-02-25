@@ -107,13 +107,10 @@ select:is(button) {
   padding: 2rem 4rem;
   position: relative;
 }
-.header-wrapper .desktop-logo {
-  display: none;
-}
 .header-wrapper .dark-theme-logo {
   display: none;
 }
-.header-wrapper .header-desktop-navigation {
+.header-wrapper .desktop-nav {
   display: none;
 }
 .header-wrapper .header-right-wrapper {
@@ -181,23 +178,19 @@ select:is(button) {
     background-color: #052a44;
   }
   .header-wrapper .light-theme-logo,
-  .header-wrapper .dark-theme-logo {
-    display: none;
-  }
-  .header-wrapper .desktop-logo {
+  .header-wrapper .desktop-nav {
     display: block;
   }
-  .header-wrapper .header-desktop-navigation {
-    display: block;
-  }
-  .header-wrapper .header-desktop-navigation .header-desktop-navigation-ul {
+  .header-wrapper .light-theme-logo .d-nav-list,
+  .header-wrapper .desktop-nav .d-nav-list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 3rem;
   }
-  .header-wrapper .header-desktop-navigation .header-desktop-navigation-ul .header-desktop-navigation-a {
+  .header-wrapper .light-theme-logo .d-nav-list .list-a,
+  .header-wrapper .desktop-nav .d-nav-list .list-a {
     font-family: "Poppins-Regular", sans-serif;
     font-size: 1.6rem;
     color: #ffffff;
@@ -205,9 +198,10 @@ select:is(button) {
 }
 
 #menu-toggle:checked ~ .burger-menu {
+  background-color: #ffffff;
   display: flex;
   height: 100vh;
-  width: calc(100% + 1rem);
+  width: calc(100% + 2rem);
   position: absolute;
   top: 6rem;
   left: 0;
@@ -296,6 +290,9 @@ body:has(#change-theme:checked) .header-wrapper .header-right-wrapper .light-the
 body:has(#change-theme:checked) .header-wrapper .header-right-wrapper .burger-bar {
   filter: invert(1);
 }
+body:has(#change-theme:checked) .header-wrapper .header-right-wrapper .burger-menu {
+  background-color: #1e2a39;
+}
 body:has(#change-theme:checked) .header-wrapper .header-right-wrapper .burger-menu .toggle-menu-bar-a {
   color: #ffffff;
 }
@@ -305,6 +302,10 @@ body:has(#change-theme:checked) .header-wrapper .header-right-wrapper .burger-me
 body:has(#change-theme:checked) .header-wrapper .header-right-wrapper .burger-menu #signin {
   background-color: #ffffff;
   color: #000000;
+}
+
+.reviews {
+  background-color: #ffffff;
 }
 
 body {
