@@ -168,6 +168,9 @@ select:is(button) {
   .header-wrapper .header-right-wrapper .desktop-signin-button #desktop-signin {
     background-color: #ffffff;
     color: #000000;
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-size: 1.6rem;
+    color: #000000;
     padding: 1.5rem 4.5rem;
     border-radius: 0.8rem;
     white-space: nowrap;

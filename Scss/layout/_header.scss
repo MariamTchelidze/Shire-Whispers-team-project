@@ -120,7 +120,7 @@
       }
 
       #signin {
-        @include btn-styles;
+        @include hover-btn-styles;
       }
     }
   }
