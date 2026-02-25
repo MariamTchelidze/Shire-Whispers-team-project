@@ -4,8 +4,15 @@ $dark-theme-bg-color: #1e2a39;
 $secondary-bg-color: #e8db84;
 
 // font colors
-$primary-text-color: #000000;
-$secondary-text-color: #ffffff;
+$primary-text-color: #000000; //light theme text colors
+$secondary-text-color: #ffffff; //dark theme text colors
+$career-path-card-text-color: #2e2e2e; //career path section card text color
+$career-path-card-secondary-text-color: #1e2a39; //career path section card secondary text color
+$career-path-span-color: #e8db84; //career path section card span text color
+$about-us-card-text-color: #071210; //about us section card text color
+$reviews-card-text-color: #12141d; //reviews section card text color
+$input-placeholder-color: #1e1e1e; //input placeholder text color
+$footer-logo-color: #052a44; //footer logo text color
 
 // box-shadows
 $video-box-shadow: 0.2rem -0.2rem 3.8rem rgba(0, 0, 0, 0.08); //This works on about us cards too
