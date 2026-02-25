@@ -63,6 +63,48 @@ select:is(button) {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
+.reviews {
+  background-color: #1e2a39;
+  padding: 4rem 0;
+  text-align: center;
+}
+.reviews_top {
+  max-width: 27.2rem;
+  height: 18rem;
+  margin: 0 auto 2.4rem;
+  padding: 0 1.6rem;
+}
+.reviews_title {
+  margin: 0 0 1.2rem;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  font-family: "Poppins";
+  color: #FFFFFF;
+}
+.reviews_subtitle {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #FFFFFF;
+}
+.reviews_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  justify-items: center;
+  padding: 0 1.6rem;
+  margin-top: 2.4rem;
+}
+.reviews_actions {
+  margin-top: 2.4rem;
+  display: flex;
+  justify-content: center;
+}
+.reviews_btn {
+  background-color: #052a44;
+  padding: 0.8rem 1.2rem;
+=======
 @font-face {
   font-family: "AvenirLTStd-medium";
   src: url("../../assets/fonts/AvenirLTStd-Medium.ttf") format("ttf");
@@ -254,10 +296,97 @@ select:is(button) {
 #menu-toggle:checked ~ .burger-menu .toggle-menu-bar .sign-in-toggle #signin {
   background-color: #052a44;
   padding: 1.5rem 3.6rem;
+>>>>>>> 4d52230f48bb5f0daccd75dd9998b845ddd4e40d
   border-radius: 0.8rem;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
+<<<<<<< HEAD
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review_card {
+  width: min(100%, 28rem);
+  background-color: #ffffff;
+  border-radius: 1.2rem;
+  padding: 1.8rem;
+  box-shadow: 0.2rem 0.4rem 2.8rem rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+.review_card_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+.review_card_photo {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.review_card_meta {
+  text-align: left;
+}
+.review_card_name {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: #111;
+}
+.review_card_role {
+  margin: 0.2rem 0 0;
+  font-size: 1.2rem;
+  color: #6b6b6b;
+}
+.review_card_text {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+@media (min-width: 48rem) {
+  .reviews {
+    padding: 7rem 0;
+  }
+  .reviews_top {
+    max-width: 60rem;
+    margin-bottom: 3.2rem;
+  }
+  .reviews_title {
+    font-size: 2.6rem;
+  }
+  .reviews_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    justify-items: stretch;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .review_card {
+    width: 100%;
+    text-align: left;
+  }
+  .review_card_top {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 64rem) {
+  .reviews_title {
+    font-size: 3.2rem;
+  }
+  .reviews_grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3rem;
+    max-width: 110rem;
+  }
+=======
 }
 
 #menu-toggle:checked + .bureger-label .burger-bar {
@@ -316,6 +445,7 @@ body {
 
 html {
   font-size: 62.5%;
+>>>>>>> 4d52230f48bb5f0daccd75dd9998b845ddd4e40d
 }
 
 /*# sourceMappingURL=styles.css.map */
