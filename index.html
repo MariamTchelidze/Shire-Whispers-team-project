@@ -21,7 +21,108 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <div class="header-wrapper">
+        <div class="logo-wrapper">
+          <a class="light-theme-logo" href="index.html">
+            <img
+              class="light-theme-logo"
+              src="assets/images/Logo-mobile.svg"
+              alt="Ehya logo"
+            />
+          </a>
+          <a class="dark-theme-logo" href="index.html">
+            <img
+              class="dark-theme-logo"
+              src="assets/images/Logomobile-dark-theme.svg"
+              alt="Dark-Theme logo"
+            />
+          </a>
+          <a href="index.html" class="desktop-logo">
+            <img src="assets/images/Desktop-logo.svg" alt="Career Path logo" />
+          </a>
+        </div>
+        <nav class="header-desktop-navigation">
+          <ul class="header-desktop-navigation-ul">
+            <li class="header-desktop-navigation-li">
+              <a class="header-desktop-navigation-a" href="#">Home</a>
+            </li>
+            <li class="header-desktop-navigation-li">
+              <a class="header-desktop-navigation-a" href="#">About Us</a>
+            </li>
+            <li class="header-desktop-navigation-li">
+              <a class="header-desktop-navigation-a" href="#">Services</a>
+            </li>
+            <li class="header-desktop-navigation-li">
+              <a class="header-desktop-navigation-a" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <input type="checkbox" id="change-theme" />
+        <div class="header-right-wrapper">
+          <!-- Dark Theme controller part -->
+          <label for="change-theme">
+            <img
+              class="light-theme-icon"
+              src="assets/images/light-theme.svg"
+              alt="Light theme toggle icon"
+            />
+            <img
+              class="dark-theme-icon"
+              src="assets/images/dark-theme.svg"
+              alt="Dark theme toggle icon"
+            />
+          </label>
+          <div class="desktop-signin-button">
+            <label class="desktop-signin-lbl" for="desktop-signin"
+              >Sign In</label
+            >
+            <button id="desktop-signin">Sign In</button>
+          </div>
+          <!-- Dark Theme controller part ends -->
+
+          <!-- Toggle Menu controller part -->
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="bureger-label">
+            <img
+              class="burger-bar"
+              src="assets/images/burger-bar.svg"
+              alt="Mobile navigation toggle icon"
+            />
+            <img
+              class="close-btn"
+              src="assets/images/close-button.svg"
+              alt="Close navigation"
+            />
+          </label>
+          <!-- Toggle Menu controller part ends -->
+
+          <!-- Burger Menu part -->
+          <div class="burger-menu">
+            <nav class="toggle-menu-bar">
+              <ul class="toggle-menu-bar-ul">
+                <li class="toggle-menu-bar-li">
+                  <a class="toggle-menu-bar-a" href="#">Home</a>
+                </li>
+                <li class="toggle-menu-bar-li">
+                  <a class="toggle-menu-bar-a" href="#">About US</a>
+                </li>
+                <li class="toggle-menu-bar-li">
+                  <a class="toggle-menu-bar-a" href="#">Services</a>
+                </li>
+                <li class="toggle-menu-bar-li">
+                  <a class="toggle-menu-bar-a" href="#">Contact</a>
+                </li>
+              </ul>
+              <div class="sign-in-toggle">
+                <label for="signin" class="toggle-sign-in">Sign In</label>
+                <button id="signin">Free Trial</button>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="career-path"></section>
       <section class="about-us"></section>
