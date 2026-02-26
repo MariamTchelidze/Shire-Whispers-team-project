@@ -1,133 +1,168 @@
 @use "../abstract/mixins" as *;
 @use "../variables" as *;
 
+
+.reviews {
+  padding: 0 2.4rem;
+  @include flex(row, center, center);
+
+  .container {
+    @include flex(column, center, center, 2.6rem);
+  }
+
+  .reviews_top {
+    @include flex(column, center, center, 2.6rem);
+
+    h2 {
+      @include poppins-28-regular;
+    }
+
+    p {
+      width: 27.2rem;
+      text-align: center;
+      @include poppins-16-regular;
+
+      @media (min-width: 768px) {
+        width: 35rem;
+        font-size: 1.8rem;
+      }
+
+      @media (min-width: 992px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .reviews_grid {
+    width: 100%;
+    display: grid;
+    gap: 2.6rem;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .review_card {
+    padding: 3.6rem 2.2rem;
+    @include flex(column, center, center, 1rem);
+    max-width: 30rem;
+    box-shadow: $absolute-box-shadow;
+    border-radius: 1.2rem;
+    background-color: $primary-bg-color;
+    margin: 0 auto;
+
+    .review_card_top {
+      @include flex(row, center, center, 1rem);
+
+      @media (min-width: 768px) {
+        justify-content: flex-start;
+      }
+    }
+
+    .review_card_photo {
+      width: 4.8rem;
+      height: 4.8rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .review_card_meta {
+      text-align: left;
+
+      h4 {
+        @include jakarta-18-semibold;
+      }
+
+      .review_card_role {
+        @include poppins-16-regular;
+        font-size: 1.2rem;
+        opacity: 0.7;
+      }
+    }
+
+    .review_card_text {
+      text-align: center;
+      @include poppins-16-regular;
+      font-size: 1.4rem;
+    }
+  }
+
+  .reviews_actions {
+    @include flex(row, center, center);
+
+    .reviews_btn {
+      @include dark-theme-button;
+    }
+  }
+
+  .reviews_navigation {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+
+    .reviews_actions {
+      display: none;
+    }
+
+    .reviews_navigation {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+
+      .reviews_arrow {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 1rem;
+        border: none;
+        cursor: pointer;
+        @include flex(row, center, center);
+        background-color: transparent;
+
+        img {
+          width: 2.4rem;
+        }
+      }
+
+      .reviews_arrow--right {
+        background-color: $footer-logo-color;
+      }
+    }
+  }
+}
+
+// dark mode
+
 body:has(#change-theme:checked) {
 
   .reviews {
     background-color: $dark-theme-bg-color;
   }
-  
-    .reviews .card {
+
+  .reviews .review_card {
     background-color: $primary-bg-color;
   }
-  .reviews button {
-    @include toggle-btn-styles;
+
+  .reviews .reviews_btn {
+    @include hover-for-dark-btn;
   }
 
-}
-.reviews {
-  padding: 0 2.4rem; 
-  background-color: $primary-bg-color;   @include flex(row, center, center);
+  .reviews .reviews_arrow--left img {
+    filter: invert(1);
+  }
 
-  
-  white-space: normal;
+  .reviews .reviews_arrow--right {
+    background-color: $primary-bg-color;
 
-  .reviews-wrapper {
-    width: 100%;
-    @include flex(column, center, center, 2.4rem);
-
-    .headings {
-      @include flex(column, center, center, 1.6rem);
-
-      h3 {
-        @include poppins-28-regular; 
-      }
-
-      p {
-        text-wrap: wrap;
-        width: 27.2rem;
-        text-align: center;
-        @include poppins-16-regular;
-
-        @media (min-width: 768px) {
-          width: 60rem;
-          font-size: 1.8rem;
-        }
-
-        @media (min-width: 992px) {
-          width: 100%;
-          max-width: 65rem;
-        }
-      }
-    }
-
-    .reviews-grid {
-      width: 100%;
-      display: grid;
-      gap: 1.6rem;
-      grid-template-columns: 1fr;
-      padding: 0 2.8rem;
-
-    
-      @media (min-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        padding: 0 2.8rem;
-      }
-
-      // computer V.
-      @media (min-width: 992px) {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
-        padding: 0; 
-      }
-
-      .card {
-        background-color: $primary-bg-color;
-        box-shadow: $reviews-card-shadow;
-        border-radius: 1.2rem;
-        padding: 2rem;
-        text-wrap: wrap;
-
-        .card-top {
-          @include flex(row, center, center, 1rem);
-          margin-bottom: 1.2rem;
-
-          @media (min-width: 768px) {
-            justify-content: flex-start;
-          }
-
-          .avatar {
-            width: 4.8rem;
-            height: 4.8rem;
-            border-radius: 50%;
-            object-fit: cover;
-          }
-
-          .meta {
-            text-align: left;
-
-            h4 {
-              @include jakarta-18-semibold;
-            }
-
-            .role {
-              text-wrap: wrap;
-              @include poppins-16-regular;
-              font-size: 1.2rem;
-              opacity: 0.7;
-            }
-          }
-        }
-
-        .text {
-          text-wrap: wrap;
-          @include poppins-16-regular;
-          font-size: 1.2rem;
-          line-height: 1.6;
-        }
-      }
-    }
-
-    .button {
-      @include flex(row, center, center);
-
-      button {
-        @include dark-theme-button;
-      }
-      button:hover {
-        @include hover-for-light-btn;
-      }
+    img {
+      filter: invert(1);
     }
   }
 }
