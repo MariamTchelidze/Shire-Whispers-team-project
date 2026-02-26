@@ -23,3 +23,8 @@ body {
 html {
   font-size: 62.5%;
 }
+
+main {
+  @include flex(column, center, center);
+  gap: 6.4rem;
+}

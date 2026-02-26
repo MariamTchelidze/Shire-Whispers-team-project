@@ -16,9 +16,16 @@
       }
       & p {
         text-wrap: wrap;
-        max-width: 27.2rem;
+        width: 27.2rem;
         text-align: center;
         @include poppins-16-regular;
+        @media (min-width: 768px) {
+          width: 35rem;
+          font-size: 1.8rem;
+        }
+        @media (min-width: 992px) {
+          width: 100%;
+        }
       }
     }
     .au-cards-wrapper::before {
