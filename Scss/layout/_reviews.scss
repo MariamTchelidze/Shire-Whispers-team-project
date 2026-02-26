@@ -32,6 +32,7 @@
     gap: 1.6rem;
     justify-items: center;
     margin-top: 2.4rem;
+    padding: 0 2.8rem;
   }
 
   &_actions {
@@ -117,6 +118,9 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 2rem;
       justify-items: stretch;
+      margin-top: 2.4rem;  
+      margin-top: 2.4rem;            
+      padding: 0 2.8rem; 
     }
   }
 
@@ -139,6 +143,7 @@
     &_grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 3rem;
+      padding: 0 2.8rem;
     }
   }
 }
