@@ -10,11 +10,6 @@ body:has(#change-theme:checked) {
     .reviews .card {
     background-color: $primary-bg-color;
   }
-
-  .reviews h3,
-  .reviews p {
-    color: $secondary-text-color;
-  }
   .reviews button {
     @include toggle-btn-styles;
   }
@@ -61,16 +56,16 @@ body:has(#change-theme:checked) {
       display: grid;
       gap: 1.6rem;
       grid-template-columns: 1fr;
-
-   
       padding: 0 2.8rem;
 
+    
       @media (min-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
         padding: 0 2.8rem;
       }
 
+      // computer V.
       @media (min-width: 992px) {
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
@@ -130,8 +125,6 @@ body:has(#change-theme:checked) {
       button {
         @include dark-theme-button;
       }
-
-      // სურვილისამებრ hover:
       button:hover {
         @include hover-for-light-btn;
       }
