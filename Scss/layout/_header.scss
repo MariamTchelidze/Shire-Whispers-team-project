@@ -124,7 +124,7 @@
       }
 
       #signin {
-        @include hover-btn-styles;
+        @include dark-theme-button;
       }
     }
   }

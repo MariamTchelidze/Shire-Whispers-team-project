@@ -1,7 +1,7 @@
 @use "../variables" as *;
 
 // button styles
-@mixin hover-btn-styles {
+@mixin dark-theme-button {
   background-color: #052a44;
   padding: 1.5rem 3.6rem;
   border-radius: 0.8rem;
@@ -17,6 +17,24 @@
   padding: 1.5rem 3.6rem;
   border-radius: 0.8rem;
 }
+// Hover style for light-buttons
+@mixin hover-for-light-btn {
+  background-color: #052a44;
+  padding: 1.5rem 3.6rem;
+  border-radius: 0.8rem;
+  color: $primary-bg-color;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+}
+@mixin hover-for-dark-btn {
+  background-color: $primary-bg-color;
+  font-size: 1.4rem;
+  font-family: "Poppins-Medium", sans-serif;
+  color: $secondary-text-color;
+  padding: 1.5rem 3.6rem;
+  border-radius: 0.8rem;
+}
+
 // desktop header button mixin
 @mixin desktop-btn-styles {
   @include toggle-btn-styles();
@@ -62,6 +80,31 @@
   }
 }
 
+// About-us Grid mixin
+@mixin au-cards-wrapper($gap: 2.6rem, $two-columns: 2, $three-columns: 3) {
+  display: grid;
+  gap: $gap;
+  grid-template-columns: 1fr;
+  // responsive
+  @media (min-width: 768px) {
+    grid-template-columns: repeat($two-columns, 1fr);
+    & > :nth-child(3) {
+      grid-column: 1 / -1;
+      justify-self: center;
+      max-width: 35rem;
+    }
+  }
+  // second responsive step
+  @media (min-width: 992px) {
+    grid-template-columns: repeat($three-columns, 1fr);
+    & > :nth-child(3) {
+      grid-column: auto; // reset
+      justify-self: stretch;
+      max-width: none;
+    }
+  }
+}
+
 // Font mixins
 @mixin main-heading-fonts {
   font-size: 3.2rem;
@@ -89,5 +132,20 @@
 @mixin poppins-16-semibold {
   font-family: "Poppins-SemiBold", sans-serif;
   font-size: 1.6rem;
+  color: $primary-text-color;
+}
+@mixin poppins-16-regular {
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 1.6rem;
+  color: $primary-text-color;
+}
+@mixin poppins-28-regular {
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 2.8rem;
+  color: $main-heading-mobile-color;
+}
+@mixin jakarta-18-semibold {
+  font-family: "Jakarta-SemiBold", sans-serif;
+  font-size: 1.8rem;
   color: $primary-text-color;
 }

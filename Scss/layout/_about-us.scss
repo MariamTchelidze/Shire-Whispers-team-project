@@ -2,3 +2,71 @@
 @use "../variables" as *;
 
 // about us section styles goes here
+.about-us {
+  padding: 0 2.4rem;
+  //   background-color: pink;
+  @include flex(row, center, center, 2.6rem);
+  .about-us-wrapper {
+    @include flex(column, center, center, 2.6rem);
+    .headings {
+      @include flex(column, center, center, 2.6rem);
+
+      & h3 {
+        @include poppins-28-regular;
+      }
+      & p {
+        text-wrap: wrap;
+        max-width: 27.2rem;
+        text-align: center;
+        @include poppins-16-regular;
+      }
+    }
+    .au-cards-wrapper {
+      @include au-cards-wrapper;
+      .card {
+        padding: 4.9rem 2.2rem;
+        @include flex(column, center, center, 1rem);
+        max-width: 26.4rem;
+        box-shadow: $absolute-box-shadow;
+        border-radius: 1.2rem;
+        position: relative;
+        & .img-icon {
+          padding: 1.7rem 2rem;
+          background-color: $footer-logo-color;
+          border-radius: 5rem;
+          position: absolute;
+          top: -2.5rem;
+        }
+        & h4 {
+          @include jakarta-18-semibold;
+        }
+        & p {
+          text-wrap: wrap;
+          max-width: 27.2rem;
+          text-align: center;
+          @include poppins-16-regular;
+        }
+      }
+    }
+    .button {
+      @include flex(row, center, center);
+      & button {
+        @include dark-theme-button;
+      }
+    }
+    @media (min-width: 768px) {
+      gap: 4rem;
+    }
+  }
+}
+body:has(#change-theme:checked) {
+  .headings {
+    & h3,
+    & p {
+      color: $secondary-text-color;
+    }
+  }
+  .card {
+    background-color: $primary-bg-color;
+  }
+}

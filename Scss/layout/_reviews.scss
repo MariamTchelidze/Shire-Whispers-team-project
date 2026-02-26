@@ -2,9 +2,7 @@
 @use "../abstract/mixins" as *;
 
 .reviews {
-  // background-color: $dark-theme-bg-color;
-  //  ეს ნაწილი ავაკომენტარი, ეს უნდა გაიწეროს მხოლოდ მაშინ
-  //  როცა dark-mode არის აქტიური.
+  background-color: $dark-theme-bg-color;
   padding: 4rem 0;
   text-align: center;
 
@@ -43,7 +41,7 @@
   }
 
   &_btn {
-    @include hover-btn-styles;
+    @include dark-theme-button;
     color: #fff;
     text-decoration: none;
     display: inline-flex;
@@ -145,9 +143,10 @@
   }
 }
 
-// Reviews section styles goes here
-// body:has(#change-theme:checked) {
-//   .reviews {
-//     background-color: $primary-bg-color;
-//   }
+// <<<<<<< HEAD
+// // Reviews section styles goes here
+// .reviews {
+//   background-color: $primary-bg-color;
 // }
+// =======
+// >>>>>>> origin/main
