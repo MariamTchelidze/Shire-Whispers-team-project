@@ -24,12 +24,22 @@
     <header>
       <div class="header-wrapper">
         <div class="logo-wrapper">
-          <a href="index.html" class="logo">
-            <picture>
-              <source media="(min-width:845px)" srcset="assets/images/Desktop-logo.svg">
-              <img class="light-theme-logo" src="./assets/images/Logo-mobile.svg" alt="Career Path logo">
-              <img class="dark-theme-logo" src="./assets/images/Logomobile-dark-theme.svg" alt="Career Path dark theme logo">
-            </picture>
+          <a class="light-theme-logo" href="index.html">
+            <img
+              class="light-theme-logo"
+              src="assets/images/Logo-mobile.svg"
+              alt="Ehya logo"
+            />
+          </a>
+          <a class="dark-theme-logo" href="index.html">
+            <img
+              class="dark-theme-logo"
+              src="assets/images/Logo-mobile-dark-theme.svg"
+              alt="Dark-Theme logo"
+            />
+          </a>
+          <a href="index.html" class="desktop-logo">   
+            <img src="assets/images/Desktop-logo.svg" alt="Career Path logo" />
           </a>
         </div>
         <!-- header navigation for desktop resolution -->
@@ -51,7 +61,7 @@
         </nav>
         <!-- header navigation for desktop resolution ends-->
 
-        <input type="checkbox" id="change-theme" />
+        <input type="checkbox" id="change-theme" />   <!-- mode-changer input-->
         <div class="header-right-wrapper">
           <!-- Dark Theme controller part -->
           <label for="change-theme">
@@ -67,9 +77,7 @@
             />
           </label>
           <div class="desktop-signin-button">
-            <p class="desktop-signin-lbl"
-              >Sign In</p
-            >
+            <p class="desktop-signin-lbl">Sign In</p>
             <button id="desktop-signin">Sign In</button>
           </div>
           <!-- Dark Theme controller part ends -->
@@ -92,19 +100,19 @@
 
           <!-- Burger Menu part -->
           <div class="burger-menu">
-            <nav class="toggle-menu-bar">
-              <ul class="toggle-menu-bar-ul">
-                <li class="toggle-menu-bar-li">
-                  <a class="toggle-menu-bar-a" href="#">Home</a>
+            <nav class="bm-nav">
+              <ul class="bm-ul">
+                <li class="bm-li">
+                  <a class="bm-a" href="#">Home</a>
                 </li>
-                <li class="toggle-menu-bar-li">
-                  <a class="toggle-menu-bar-a" href="#">About US</a>
+                <li class="bm-li">
+                  <a class="bm-a" href="#">About US</a>
                 </li>
-                <li class="toggle-menu-bar-li">
-                  <a class="toggle-menu-bar-a" href="#">Services</a>
+                <li class="bm-li">
+                  <a class="bm-a" href="#">Services</a>
                 </li>
-                <li class="toggle-menu-bar-li">
-                  <a class="toggle-menu-bar-a" href="#">Contact</a>
+                <li class="bm-li">
+                  <a class="bm-a" href="#">Contact</a>
                 </li>
               </ul>
               <div class="sign-in-toggle">
@@ -113,6 +121,7 @@
               </div>
             </nav>
           </div>
+          <!-- Burger Menu part ending-->
         </div>
       </div>
     </header>
@@ -125,7 +134,7 @@
       <section class="our-services"></section>
       <section class="stories"></section>
       <section class="reviews">
-        <div class="reviews_top">
+        <!-- <div class="reviews_top">
         <h2 class="reviews_title">Reviews from our Customers</h2>
         <p class="reviews_subtitle">
         CareerPathNow has got more than 100k positive ratings from our users around the world.
@@ -167,7 +176,7 @@
         </article>
         <div class="reviews_actions">
         <a class="reviews_btn" href="#">See More</a>
-        </div>
+        </div> -->
       </section>
       <section class="subscribe-forms"></section>
     </main>

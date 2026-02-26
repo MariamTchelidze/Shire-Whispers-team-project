@@ -8,18 +8,18 @@
   opacity: 0;
   pointer-events: none;
 }
-
 .header-wrapper {
   background-color: $primary-bg-color;
   @include flex(row, space-between, center);
   padding: 2rem 4rem;
   position: relative;
-  // .desktop-logo {
-  //   display: none;
-  // }
-  // .dark-theme-logo {
-  //   display: none;
-  // }
+  border-radius: 1.2rem;
+  .desktop-logo {
+    display: none;
+  }
+  .dark-theme-logo {
+    display: none;
+  }
   .dark-theme-logo {
     display: none;
   }
@@ -74,12 +74,12 @@
   @media (min-width: 845px) {
     background-color: $footer-logo-color;
     .light-theme-logo,
-    // .dark-theme-logo {
-    //   display: none;
-    // }
-    // .desktop-logo {
-    //   display: block;
-    // }
+    .dark-theme-logo {
+      display: none;
+    }
+    .desktop-logo {
+      display: block;
+    }
     .desktop-nav {
       display: block;
       .d-nav-list {
@@ -105,13 +105,13 @@
 
   @include flex(column, start, center, 3.5rem);
 
-  .toggle-menu-bar {
+  .bm-nav {
     @include flex(column, center, center, 2rem);
 
-    .toggle-menu-bar-ul {
+    .bm-ul {
       @include flex(column, center, center, 1.6rem);
 
-      .toggle-menu-bar-a {
+      .bm-a {
         @include toggle-fonts;
       }
     }

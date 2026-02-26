@@ -106,6 +106,13 @@ select:is(button) {
   align-items: center;
   padding: 2rem 4rem;
   position: relative;
+  border-radius: 1.2rem;
+}
+.header-wrapper .desktop-logo {
+  display: none;
+}
+.header-wrapper .dark-theme-logo {
+  display: none;
 }
 .header-wrapper .dark-theme-logo {
   display: none;
@@ -178,10 +185,15 @@ select:is(button) {
     background-color: #052a44;
   }
   .header-wrapper .light-theme-logo,
+  .header-wrapper .dark-theme-logo {
+    display: none;
+  }
+  .header-wrapper .desktop-logo {
+    display: block;
+  }
   .header-wrapper .desktop-nav {
     display: block;
   }
-  .header-wrapper .light-theme-logo .d-nav-list,
   .header-wrapper .desktop-nav .d-nav-list {
     display: flex;
     flex-direction: row;
@@ -189,7 +201,6 @@ select:is(button) {
     align-items: center;
     gap: 3rem;
   }
-  .header-wrapper .light-theme-logo .d-nav-list .list-a,
   .header-wrapper .desktop-nav .d-nav-list .list-a {
     font-family: "Poppins-Regular", sans-serif;
     font-size: 1.6rem;
@@ -212,40 +223,40 @@ select:is(button) {
   align-items: center;
   gap: 3.5rem;
 }
-#menu-toggle:checked ~ .burger-menu .toggle-menu-bar {
+#menu-toggle:checked ~ .burger-menu .bm-nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
-#menu-toggle:checked ~ .burger-menu .toggle-menu-bar .toggle-menu-bar-ul {
+#menu-toggle:checked ~ .burger-menu .bm-nav .bm-ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.6rem;
 }
-#menu-toggle:checked ~ .burger-menu .toggle-menu-bar .toggle-menu-bar-ul .toggle-menu-bar-a {
+#menu-toggle:checked ~ .burger-menu .bm-nav .bm-ul .bm-a {
   font-family: "Poppins-SemiBold", sans-serif;
   font-size: 1.6rem;
   color: #000000;
   text-transform: capitalize;
 }
-#menu-toggle:checked ~ .burger-menu .toggle-menu-bar .sign-in-toggle {
+#menu-toggle:checked ~ .burger-menu .bm-nav .sign-in-toggle {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
-#menu-toggle:checked ~ .burger-menu .toggle-menu-bar .sign-in-toggle .toggle-sign-in {
+#menu-toggle:checked ~ .burger-menu .bm-nav .sign-in-toggle .toggle-sign-in {
   font-family: "Poppins-SemiBold", sans-serif;
   font-size: 1.6rem;
   color: #000000;
   text-transform: capitalize;
 }
-#menu-toggle:checked ~ .burger-menu .toggle-menu-bar .sign-in-toggle #signin {
+#menu-toggle:checked ~ .burger-menu .bm-nav .sign-in-toggle #signin {
   background-color: #052a44;
   padding: 1.5rem 3.6rem;
   border-radius: 0.8rem;

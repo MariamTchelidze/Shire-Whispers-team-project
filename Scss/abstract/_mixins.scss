@@ -17,7 +17,7 @@
   padding: 1.5rem 3.6rem;
   border-radius: 0.8rem;
 }
-// desktop  button mixin
+// desktop header button mixin
 @mixin desktop-btn-styles {
   @include toggle-btn-styles();
   @include poppins-16-semibold;
@@ -29,6 +29,7 @@
   background-color: $primary-bg-color;
   color: $primary-text-color;
 }
+
 // play -video button styles
 @mixin play-btn {
   background-color: $primary-bg-color;
@@ -50,7 +51,7 @@
   padding: 2rem 2.4rem;
 }
 
-// Display flex - grid mixins
+// Display flex or/and grid mixins
 @mixin flex($direction: row, $justify: center, $align: center, $gap: null) {
   display: flex;
   flex-direction: $direction;
