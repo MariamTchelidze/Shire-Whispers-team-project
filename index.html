@@ -34,34 +34,31 @@
           <a class="dark-theme-logo" href="index.html">
             <img
               class="dark-theme-logo"
-              src="assets/images/Logo-mobile-dark-theme.svg"
+              src="assets/images/Logomobile-dark-theme.svg"
               alt="Dark-Theme logo"
             />
           </a>
-          <a href="index.html" class="desktop-logo">   
+          <a href="index.html" class="desktop-logo">
             <img src="assets/images/Desktop-logo.svg" alt="Career Path logo" />
           </a>
         </div>
-        <!-- header navigation for desktop resolution -->
-        <nav class="desktop-nav">
-          <ul class="d-nav-list">
-            <li class="list-item">
-              <a class="list-a" href="#">Home</a>
+        <nav class="header-desktop-navigation">
+          <ul class="header-desktop-navigation-ul">
+            <li class="header-desktop-navigation-li">
+              <a class="header-desktop-navigation-a" href="#">Home</a>
             </li>
-            <li class="list-item">
-              <a class="list-a" href="#">About Us</a>
+            <li class="header-desktop-navigation-li">
+              <a class="header-desktop-navigation-a" href="#">About Us</a>
             </li>
-            <li class="list-item">
-              <a class="list-a" href="#">Services</a>
+            <li class="header-desktop-navigation-li">
+              <a class="header-desktop-navigation-a" href="#">Services</a>
             </li>
-            <li class="list-item">
-              <a class="list-a" href="#">Contact</a>
+            <li class="header-desktop-navigation-li">
+              <a class="header-desktop-navigation-a" href="#">Contact</a>
             </li>
           </ul>
         </nav>
-        <!-- header navigation for desktop resolution ends-->
-
-        <input type="checkbox" id="change-theme" />   <!-- mode-changer input-->
+        <input type="checkbox" id="change-theme" />
         <div class="header-right-wrapper">
           <!-- Dark Theme controller part -->
           <label for="change-theme">
@@ -77,7 +74,9 @@
             />
           </label>
           <div class="desktop-signin-button">
-            <p class="desktop-signin-lbl">Sign In</p>
+            <label class="desktop-signin-lbl" for="desktop-signin"
+              >Sign In</label
+            >
             <button id="desktop-signin">Sign In</button>
           </div>
           <!-- Dark Theme controller part ends -->
@@ -100,19 +99,19 @@
 
           <!-- Burger Menu part -->
           <div class="burger-menu">
-            <nav class="bm-nav">
-              <ul class="bm-ul">
-                <li class="bm-li">
-                  <a class="bm-a" href="#">Home</a>
+            <nav class="toggle-menu-bar">
+              <ul class="toggle-menu-bar-ul">
+                <li class="toggle-menu-bar-li">
+                  <a class="toggle-menu-bar-a" href="#">Home</a>
                 </li>
-                <li class="bm-li">
-                  <a class="bm-a" href="#">About US</a>
+                <li class="toggle-menu-bar-li">
+                  <a class="toggle-menu-bar-a" href="#">About US</a>
                 </li>
-                <li class="bm-li">
-                  <a class="bm-a" href="#">Services</a>
+                <li class="toggle-menu-bar-li">
+                  <a class="toggle-menu-bar-a" href="#">Services</a>
                 </li>
-                <li class="bm-li">
-                  <a class="bm-a" href="#">Contact</a>
+                <li class="toggle-menu-bar-li">
+                  <a class="toggle-menu-bar-a" href="#">Contact</a>
                 </li>
               </ul>
               <div class="sign-in-toggle">
@@ -121,7 +120,6 @@
               </div>
             </nav>
           </div>
-          <!-- Burger Menu part ending-->
         </div>
       </div>
     </header>
@@ -130,104 +128,72 @@
         <div class="career-path-wrapper">
          
       </section>
-      <section class="about-us">
-        <div class="about-us-wrapper">
-          <div class="headings">
-            <h3>About Us</h3>
-            <p>
-              Skilline is one powerful online software suite that 
-              combines all the tools needed to run a successful school or office.
-            </p>
-          </div>
-          <div class="au-cards-wrapper">
-            <div class="card card1">
-              <h4>Mission</h4>
-              <p>Tailored career solutions, industry-leading assessments, and expert counseling. </p>
-              <div class="img-icon">
-              <img src="./assets/images/file-invoice.svg" alt="Information about us">
-              </div>
-            </div>
-            <div class="card">
-              <h4>Values</h4>
-              <p>Tailored career solutions, industry-leading assessments, and expert counseling.
-              </p>
-              <div class="img-icon">
-              <img src="./assets/images/file-invoice.svg" alt="Information about us">
-              </div>
-            </div>
-            <div class="card card3">
-              <h4>Unique Selling Points</h4>
-              <p>Tailored career solutions, industry-leading assessments, and expert counseling.</p>
-              <div class="img-icon">
-              <img src="./assets/images/file-invoice.svg" alt="Information about us">
-              </div>
-            </div>
-            
-        </div>
-        <div class="button">
-          <button>Learn More</button>
-        </div>
-      </div>
-
-      </section>
+      <section class="about-us"></section>
       <section class="our-services"></section>
       <section class="stories"></section>
-      <section class="reviews">
-      <div class="reviews-wrapper">
-      <div class="headings">
-      <h3>Reviews from our Customers</h3>
-      <p>
+      <section class="reviews" id="reviews">
+      <div class="container">
+
+      <div class="reviews_top">
+      <h2 class="reviews_title">Reviews from our Customers</h2>
+      <p class="reviews_subtitle">
         CareerPathNow has got more than 100k positive ratings from our users around the world.
       </p>
       </div>
 
-      <div class="reviews-grid">
-      <article class="card">
-      <div class="card-top">
-      <img class="avatar" src="./assets/images/user1.png" alt="User photo" />
-      <div class="meta">
-      <h4>Mika McSabbu</h4>
-      <p class="role">Freelance Designer</p>
+      <div class="reviews_grid">
+      <article class="review_card">
+      <div class="review_card_top">
+      <img class="review_card_photo" src="./assets/images/user1.png" alt="User photo" />
+      <div class="review_card_meta">
+      <h4 class="review_card_name">Mika McSabbu</h4>
+      <p class="review_card_role">Freelance Designer</p>
       </div>
       </div>
-      <p class="text">
+      <p class="review_card_text">
         We test and compare the best project management software for collaborating with a team, hitting deadlines.
       </p>
       </article>
 
-      <article class="card">
-      <div class="card-top">
-      <img class="avatar" src="./assets/images/user2.png" alt="User photo" />
-      <div class="meta">
-      <h4>Mika McSabbu</h4>
-      <p class="role">Freelance Designer</p>
+      <article class="review_card">
+      <div class="review_card_top">
+      <img class="review_card_photo" src="./assets/images/user2.png" alt="User photo" />
+      <div class="review_card_meta">
+      <h4 class="review_card_name">Mika McSabbu</h4>
+      <p class="review_card_role">Freelance Designer</p>
       </div>
       </div>
-      <p class="text">
+      <p class="review_card_text">
         We test and compare the best project management software for collaborating with a team, hitting deadlines.
       </p>
       </article>
 
-      <article class="card">
-      <div class="card-top">
-      <img class="avatar" src="./assets/images/user3.png" alt="User photo" />
-      <div class="meta">
-      <h4>Mika McSabbu</h4>
-      <p class="role">Freelance Designer</p>
+      <article class="review_card">
+      <div class="review_card_top">
+      <img class="review_card_photo" src="./assets/images/user3.png" alt="User photo" />
+      <div class="review_card_meta">
+      <h4 class="review_card_name">Mika McSabbu</h4>
+      <p class="review_card_role">Freelance Designer</p>
       </div>
       </div>
-      <p class="text">
+      <p class="review_card_text">
         We test and compare the best project management software for collaborating with a team, hitting deadlines.
       </p>
       </article>
       </div>
-
-      <div class="button">
-      <button>See More</button>
+      <div class="reviews_actions">
+      <a class="reviews_btn" href="#">See More</a>
+      </div>
+      <div class="reviews_navigation"> 
+      <button class="reviews_arrow reviews_arrow--left"> 
+      <img src="./assets/images/arrow-left.svg" alt="Previous"> 
+      </button> 
+      <button class="reviews_arrow reviews_arrow--right"> 
+      <img src="./assets/images/arrow-right.svg" alt="Next"> 
+      </button> 
       </div>
       </div>
       </section>
-      
       <section class="subscribe-forms"></section>
     </main>
     <footer></footer>
