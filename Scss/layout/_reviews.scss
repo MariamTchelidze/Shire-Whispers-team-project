@@ -2,7 +2,9 @@
 @use "../abstract/mixins" as *;
 
 .reviews {
-  background-color: $dark-theme-bg-color;
+  // background-color: $dark-theme-bg-color;
+  //  ეს ნაწილი ავაკომენტარი, ეს უნდა გაიწეროს მხოლოდ მაშინ
+  //  როცა dark-mode არის აქტიური.
   padding: 4rem 0;
   text-align: center;
 
@@ -40,7 +42,7 @@
     justify-content: center;
   }
 
-    &_btn {
+  &_btn {
     @include hover-btn-styles;
     color: #fff;
     text-decoration: none;
@@ -143,4 +145,9 @@
   }
 }
 
-
+// Reviews section styles goes here
+// body:has(#change-theme:checked) {
+//   .reviews {
+//     background-color: $primary-bg-color;
+//   }
+// }

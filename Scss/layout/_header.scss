@@ -8,19 +8,22 @@
   opacity: 0;
   pointer-events: none;
 }
-
 .header-wrapper {
   background-color: $primary-bg-color;
   @include flex(row, space-between, center);
   padding: 2rem 4rem;
   position: relative;
+  border-radius: 1.2rem;
   .desktop-logo {
     display: none;
   }
   .dark-theme-logo {
     display: none;
   }
-  .header-desktop-navigation {
+  .dark-theme-logo {
+    display: none;
+  }
+  .desktop-nav {
     display: none;
   }
   .header-right-wrapper {
@@ -77,11 +80,11 @@
     .desktop-logo {
       display: block;
     }
-    .header-desktop-navigation {
+    .desktop-nav {
       display: block;
-      .header-desktop-navigation-ul {
+      .d-nav-list {
         @include flex(row, center, center, 3rem);
-        .header-desktop-navigation-a {
+        .list-a {
           @include header-navigation-fonts;
         }
       }
@@ -91,9 +94,10 @@
 
 // Burger menu controller functionality
 #menu-toggle:checked ~ .burger-menu {
+  background-color: $primary-bg-color;
   display: flex;
   height: 100vh;
-  width: calc(100% + 1rem);
+  width: calc(100% + 2rem);
   position: absolute;
   top: 6rem;
   left: 0;
@@ -101,13 +105,13 @@
 
   @include flex(column, start, center, 3.5rem);
 
-  .toggle-menu-bar {
+  .bm-nav {
     @include flex(column, center, center, 2rem);
 
-    .toggle-menu-bar-ul {
+    .bm-ul {
       @include flex(column, center, center, 1.6rem);
 
-      .toggle-menu-bar-a {
+      .bm-a {
         @include toggle-fonts;
       }
     }
@@ -168,6 +172,7 @@ body:has(#change-theme:checked) {
         filter: invert(1);
       }
       .burger-menu {
+        background-color: $dark-theme-bg-color;
         .toggle-menu-bar-a {
           color: $secondary-text-color;
         }

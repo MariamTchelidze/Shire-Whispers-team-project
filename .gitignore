@@ -1,0 +1,9 @@
+# Compiled CSS
+assets/css/styles.css
+assets/css/styles.css.map
+
+# Node modules (if you use them)
+node_modules/
+
+# OS files
+.DS_Store
