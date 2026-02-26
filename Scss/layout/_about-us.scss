@@ -21,8 +21,21 @@
         @include poppins-16-regular;
       }
     }
+    .au-cards-wrapper::before {
+      content: "";
+      position: absolute;
+      width: 8rem;
+      height: 8rem;
+      background: url(../../assets/images/circle.svg) no-repeat center;
+      background-size: contain;
+      bottom: -2rem;
+      left: -2rem;
+      z-index: -1;
+    }
     .au-cards-wrapper {
       @include au-cards-wrapper;
+      position: relative;
+      z-index: 0;
       .card {
         padding: 4.9rem 2.2rem;
         @include flex(column, center, center, 1rem);
@@ -30,6 +43,8 @@
         box-shadow: $absolute-box-shadow;
         border-radius: 1.2rem;
         position: relative;
+        background-color: $primary-bg-color;
+        z-index: 1;
         & .img-icon {
           padding: 1.7rem 2rem;
           background-color: $footer-logo-color;
@@ -42,12 +57,12 @@
         }
         & p {
           text-wrap: wrap;
-          max-width: 27.2rem;
           text-align: center;
           @include poppins-16-regular;
         }
       }
     }
+
     .button {
       @include flex(row, center, center);
       & button {
@@ -56,6 +71,14 @@
     }
     @media (min-width: 768px) {
       gap: 4rem;
+      .au-cards-wrapper::before {
+        display: none;
+      }
+    }
+    @media (min-width: 992px) {
+      .au-cards-wrapper::before {
+        display: block;
+      }
     }
   }
 }
@@ -68,5 +91,9 @@ body:has(#change-theme:checked) {
   }
   .card {
     background-color: $primary-bg-color;
+  }
+  .au-cards-wrapper::before {
+    background: url(../../assets/images/circle-dark-theme.svg) no-repeat center;
+    background-size: contain;
   }
 }
