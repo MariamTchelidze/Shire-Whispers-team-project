@@ -15,17 +15,8 @@
         @include poppins-28-regular;
       }
       & p {
-        text-wrap: wrap;
-        width: 27.2rem;
-        text-align: center;
+        @include mobile-p-layout;
         @include poppins-16-regular;
-        @media (min-width: 768px) {
-          width: 35rem;
-          font-size: 1.8rem;
-        }
-        @media (min-width: 992px) {
-          width: 100%;
-        }
       }
     }
     .au-cards-wrapper::before {
@@ -87,20 +78,5 @@
         display: block;
       }
     }
-  }
-}
-body:has(#change-theme:checked) {
-  .headings {
-    & h3,
-    & p {
-      color: $secondary-text-color;
-    }
-  }
-  .card {
-    background-color: $primary-bg-color;
-  }
-  .au-cards-wrapper::before {
-    background: url(../../assets/images/circle-dark-theme.svg) no-repeat center;
-    background-size: contain;
   }
 }
