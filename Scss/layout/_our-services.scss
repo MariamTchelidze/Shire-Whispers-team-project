@@ -1,12 +1,10 @@
 @use "../abstract/mixins" as *;
 @use "../variables" as *;
 
-
 .our-services {
   padding: 0 2.4rem;
+  background-color: $primary-bg-color;
   @include flex(row, center, center);
-  background-color: $primary-bg-color; 
-}
 
   .our-services-wrapper {
     width: 100%;
@@ -15,61 +13,71 @@
     background-color: #d8cc7a;
     border-radius: 2rem;
     padding: 4rem 2rem;
-
-    @include flex(column, center, center, 3rem);
+    overflow: hidden;
+    @include flex(column, flex-start, center, 4rem);
   }
 
- 
-  .our-services-right {
-    order: 1;
+   .our-services-right {
     width: 100%;
-    @include flex(column, center, center, 2rem);
+    order: 1;
+
+    @include flex(column, flex-start, center, 3rem);
 
     .headings {
-      @include flex(column, center, center, 1.6rem);
+      width: 100%;
+      max-width: 45rem;
+      margin: 0 auto;
+      text-align: center;
 
       h3 {
         @include poppins-28-regular;
       }
 
       p {
-        text-align: center;
-        width: 27.2rem;
+        margin-top: 1.2rem;
         @include poppins-16-regular;
       }
     }
 
     .services-list {
-      @include flex(column, flex-start, center, 2rem);
       width: 100%;
+      max-width: 45rem;
+      margin: 0 auto;
+
+      @include flex(column, flex-start, flex-start, 2rem);
 
       .service-item {
         @include flex(row, flex-start, center, 1.6rem);
 
         .icon {
-            width: 4.8rem;
-            height: 4.8rem;
-            border-radius: 50%;
-            background-color: $primary-bg-color;
-            @include flex(row, center, center);
+          width: 4.8rem;
+          height: 4.8rem;
+          min-width: 4.8rem;
+          border-radius: 50%;
+          background-color: $primary-bg-color;
 
-        img {
-            width: 2.4rem;
-            height: 2.4rem;
-            object-fit: contain;
-  }
-}
+          @include flex(row, center, center);
+        }
 
         span {
           @include poppins-16-regular;
         }
       }
     }
+
+    .button {
+      width: 100%;
+      @include flex(row, center, center);
+
+      button {
+        @include dark-theme-button;
+      }
+    }
   }
 
   .our-services-left {
-    order: 2;
     width: 100%;
+    order: 2;
     position: relative;
 
     .browser {
@@ -124,45 +132,44 @@
 
     .blue-circle {
       position: absolute;
-      width: 14rem;
-      height: 14rem;
+      width: 9.9rem;
+      height: 9.9rem;
       background-color: $footer-logo-color;
       border-radius: 50%;
-      bottom: -3rem;
-      left: -3rem;
+      bottom: -2rem;
+      left: -2rem;
       z-index: 1;
     }
   }
 
-  .button {
-    order: 3;
-    @include flex(row, center, center);
-
-    button {
-      @include dark-theme-button;
-    }
-  }
-
- //Tablet V.
+//Tablet V.
 
   @media (min-width: 768px) {
     .our-services-wrapper {
       padding: 5rem 4rem;
     }
 
-    .our-services-right .headings p {
-      width: 40rem;
-      font-size: 1.8rem;
+    .headings {
+      max-width: 50rem;
     }
+
+    .services-list {
+      max-width: 50rem;
+    }
+  .our-services-left .blue-circle {
+    width: 14rem;
+    height: 14rem;
+    bottom: -3rem;
+    left: -3rem;
   }
-
+  }
   //Desktop V.
-
   @media (min-width: 992px) {
 
     .our-services-wrapper {
-      @include flex(row, space-between, center, 4rem);
-      padding: 6rem;
+      @include flex(row, space-between, center, 6rem);
+      padding: 6rem 8rem;
+      height: 59.8rem;
     }
 
     .our-services-left,
@@ -170,38 +177,48 @@
       width: 50%;
       order: unset;
     }
-
-    .button {
-      width: 100%;
-      justify-content: flex-start;
-    }
-
+     .our-services-left .blue-circle {
+    width: 19.7rem;
+    height: 19.7rem;
+    bottom: -4rem;
+    left: -4rem;
+  }
     .our-services-right {
       align-items: flex-start;
 
       .headings {
-        align-items: flex-start;
-
-        p {
-          text-align: left;
-          width: 100%;
-        }
+        margin: 0;
+        text-align: left;
+        max-width: 60rem;
       }
 
       .services-list {
-        align-items: flex-start;
+        margin: 0;
+        max-width: 60rem;
+      }
+
+      .button {
+        justify-content: flex-start;
       }
     }
   }
+}
 
+//dark
 
 body:has(#change-theme:checked) {
 
-   .our-services {
+  .our-services {
     background-color: $dark-theme-bg-color;
   }
-   .our-services h3,
-  .our-services .headings p {
-    color: $primary-text-color;
+
+  .our-services h3,
+  .our-services p,
+  .our-services span {
+    color: $secondary-text-color;
+  }
+
+  .our-services .icon {
+    background-color: $footer-logo-color;
   }
 }
