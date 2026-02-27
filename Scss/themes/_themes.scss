@@ -1,0 +1,75 @@
+@use "../abstract/mixins" as *;
+@use "../variables" as *;
+
+// Light & Dark Color Theme Controller Functionality Header Styles
+body:has(#change-theme:checked) {
+  background-color: $dark-theme-bg-color;
+  .header-wrapper {
+    background-color: $dark-theme-bg-color;
+
+    .dark-theme-logo {
+      display: block;
+      @media (min-width: 845px) {
+        display: none;
+      }
+    }
+    .light-theme-logo {
+      display: none;
+    }
+
+    .header-right-wrapper {
+      .dark-theme-icon {
+        display: block;
+        filter: invert(1);
+        cursor: pointer;
+      }
+
+      .light-theme-icon {
+        display: none;
+      }
+
+      .burger-bar {
+        filter: invert(1);
+      }
+      .burger-menu {
+        background-color: $dark-theme-bg-color;
+        z-index: 3;
+        .bm-a {
+          color: $secondary-text-color;
+        }
+        .toggle-sign-in {
+          color: $secondary-text-color;
+        }
+        #signin {
+          @include toggle-btn-styles;
+        }
+      }
+    }
+  }
+}
+// Career-path section: so called Heo-section
+body:has(#change-theme:checked) {
+  .career-path-wrapper .heading-div {
+    & h2,
+    & p {
+      color: $secondary-text-color;
+    }
+  }
+}
+
+// About us section: Dark & light mode controller
+body:has(#change-theme:checked) {
+  .headings {
+    & h3,
+    & p {
+      color: $secondary-text-color;
+    }
+  }
+  .card {
+    background-color: $primary-bg-color;
+  }
+  .au-cards-wrapper::before {
+    background: url(../../assets/images/circle-dark-theme.svg) no-repeat center;
+    background-size: contain;
+  }
+}
