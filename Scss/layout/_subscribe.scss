@@ -1,89 +1,105 @@
 @use "../abstract/mixins" as *;
 @use "../variables" as *;
 
-// Subscribe Section Styles goes here
 .subscribe-forms {
-  background-color: #E8DB84;
-  text-align: center;
-  border-radius: 24px;
-  padding: 80px 20px;
+  padding: 0 2.4rem;
+  background-color: $primary-bg-color;
 
-  .wrapper{
-    max-width: 1240px;
+  .wrapper {
+    width: 100%;
+    max-width: 140rem;
     margin: 0 auto;
+    min-height: 40rem;
+    background-color: #d8cc7a;
+    border-radius: 2.9rem;
+    padding: 6rem 2rem;
+    text-align: center;
+
+    @include flex(column, center, center, 2rem);
   }
 
   .subscribe-title {
-    color: #000000;
-    font-size: 42px;
-    font-weight: 600;
-    margin-bottom: 16px;
+    @include poppins-28-regular;
+    max-width: 60rem;
   }
 
   .subscribe-subtitle,
   .subscribe-subtext {
-    color: #000000;
-    font-size: 18px;
-    margin-bottom: 8px;
+    @include poppins-16-regular;
+    max-width: 60rem;
   }
 
   .subscribe-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    width: 100%;
+    max-width: 70rem;
+    margin-top: 2rem;
+
+    @include flex(column, center, center, 2rem);
 
     .row {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      
-      input,
-      textarea {
-        padding: 12px;
-        border: 1px solid #1E1E1E;
-        border-radius: 8px;
-        font-size: 16px;
-        width: 100%;
-      }
+      width: 100%;
+      @include flex(column, center, center, 1.6rem);
+    }
 
-      textarea {
-        min-height: 100px;
-        resize: vertical;
-      }
+    input,
+    textarea {
+      width: 100%;
+      padding: 1.6rem;
+      border-radius: 1rem;
+      border: 1px solid #1e1e1e;
+      font-size: 1.4rem;
+      font-family: "Poppins-Regular", sans-serif;
+      outline: none;
+      transition: 0.3s ease;
+    }
+
+    textarea {
+      min-height: 12rem;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: $footer-logo-color;
     }
 
     button {
-        background-color: #052A44;
-        color: #FFFFFF;
-        padding: 15px 43px;
-        font-size: 16px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: 0.3s;
-        width: fit-content;
-        align-self: center;
-
-        &:hover {
-            background-color: #E8DB84;
-        }
+      margin-top: 1rem;
+      @include dark-theme-button;
     }
   }
-}
 
-@media (min-width: 768px) {
-  .subscribe-forms {
-
+  @media (min-width: 768px) {
     .subscribe-form {
-
       .row {
         flex-direction: row;
-        gap: 20px;
+      }
 
-        input {
-          flex: 1;
-        }
+      input {
+        flex: 1;
       }
     }
   }
+
+@media (min-width: 992px) {
+
+  .wrapper {
+    max-width: 100rem; 
+    min-height: 59.8rem; 
+    padding: 6rem 8rem;
+  }
+
+  .subscribe-form {
+    max-width: 80rem;
+  }
+}
+}
+
+body:has(#change-theme:checked) {
+
+  .subscribe-forms {
+    background-color: $dark-theme-bg-color;
+  }
+  
+
 }
