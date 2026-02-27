@@ -32,7 +32,6 @@
       }
     }
   }
-
   .reviews_grid {
     width: 100%;
     display: grid;
@@ -64,21 +63,18 @@
         justify-content: flex-start;
       }
     }
-
     .review_card_photo {
       width: 4.8rem;
       height: 4.8rem;
       border-radius: 50%;
       object-fit: cover;
     }
-
     .review_card_meta {
       text-align: left;
 
       h4 {
         @include jakarta-18-semibold;
       }
-
       .review_card_role {
         @include poppins-16-regular;
         font-size: 1.2rem;
@@ -92,31 +88,25 @@
       font-size: 1.4rem;
     }
   }
-
   .reviews_actions {
     @include flex(row, center, center);
-
     .reviews_btn {
       @include dark-theme-button;
     }
   }
-
   .reviews_navigation {
     display: none;
   }
 
   @media (min-width: 768px) {
-
     .reviews_actions {
       display: none;
     }
-
     .reviews_navigation {
       display: flex;
       justify-content: center;
       gap: 2rem;
       margin-top: 2rem;
-
       .reviews_arrow {
         width: 5rem;
         height: 5rem;
@@ -130,7 +120,6 @@
           width: 2.4rem;
         }
       }
-
       .reviews_arrow--right {
         background-color: $footer-logo-color;
       }
@@ -141,28 +130,20 @@
 // dark mode
 
 body:has(#change-theme:checked) {
-
   .reviews {
-    background-color: $dark-theme-bg-color;
-  }
-
-  .reviews .review_card {
-    background-color: $primary-bg-color;
-  }
-
-  .reviews .reviews_btn {
-    @include hover-for-dark-btn;
-  }
-
-  .reviews .reviews_arrow--left img {
-    filter: invert(1);
-  }
-
-  .reviews .reviews_arrow--right {
-    background-color: $primary-bg-color;
-
-    img {
-      filter: invert(1);
+    .reviews_actions {
+      .reviews_btn {
+        background-color: $primary-bg-color;
+        color: $primary-text-color;
+      }
     }
+    .reviews_title {
+      color: $secondary-text-color;
+    }
+    .reviews_subtitle {
+      color: $secondary-text-color;
+    }
+
   }
+
 }
