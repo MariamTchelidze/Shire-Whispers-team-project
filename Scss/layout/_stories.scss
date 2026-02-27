@@ -1,4 +1,208 @@
 @use "../abstract/mixins" as *;
 @use "../variables" as *;
 
-// Stories section styles goes here
+.stories {
+  padding: 0 2.4rem;
+  background-color: $primary-bg-color;
+  @include flex(row, center, center);
+
+  .stories-wrapper {
+    width: 100%;
+    max-width: 100rem;
+    min-height: 40rem;
+    background-color: #d8cc7a;
+    border-radius: 2.9rem;
+    padding: 4rem 2rem;
+    overflow: hidden;
+
+    @include flex(column, flex-start, center, 4rem);
+  }
+
+  .stories-left {
+    width: 100%;
+    order: 1;
+    @include flex(column, flex-start, center, 3rem);
+
+    .headings {
+      width: 100%;
+      max-width: 45rem;
+      margin: 0 auto;
+      text-align: center;
+
+      h3 {
+        @include poppins-28-regular;
+      }
+
+      p {
+        margin-top: 1.2rem;
+        @include poppins-16-regular;
+      }
+    }
+
+    .stories-list {
+      width: 100%;
+      max-width: 45rem;
+      margin: 0 auto;
+      @include flex(column, flex-start, flex-start, 2rem);
+
+      .story-item {
+        @include flex(row, flex-start, center, 1.6rem);
+
+        .icon {
+          width: 4.8rem;
+          height: 4.8rem;
+          min-width: 4.8rem;
+          border-radius: 50%;
+          background-color: $primary-bg-color;
+          @include flex(row, center, center);
+        }
+
+        span {
+          @include poppins-16-regular;
+        }
+      }
+    }
+
+    .button {
+      width: 100%;
+      @include flex(row, center, center);
+
+      button {
+        @include dark-theme-button;
+      }
+    }
+  }
+
+
+  .stories-right {
+    width: 100%;
+    order: 2;
+    position: relative;
+
+    .browser {
+      background: #f3f3f3;
+      border-radius: 1.6rem;
+      padding: 1.6rem;
+      box-shadow: $absolute-box-shadow;
+      position: relative;
+      z-index: 2;
+    }
+
+    .browser-top {
+      display: flex;
+      gap: 0.8rem;
+      margin-bottom: 1.6rem;
+
+      .dot {
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+      }
+
+      .red { background: #EE6767; }
+      .yellow { background: #F6C566; }
+      .green { background: #5BEB7B; }
+    }
+
+    .browser-images {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .image-large img {
+      width: 100%;
+      height: 22rem;
+      object-fit: cover;
+      border-radius: 1.2rem;
+    }
+
+    .image-row {
+      display: flex;
+      gap: 1.6rem;
+
+      img {
+        width: 50%;
+        height: 16rem;
+        object-fit: cover;
+        border-radius: 1.2rem;
+      }
+    }
+
+    .blue-circle {
+      position: absolute;
+      width: 9.9rem;
+      height: 9.9rem;
+      background-color: $footer-logo-color;
+      border-radius: 50%;
+      bottom: -2rem;
+      right: -2rem;
+      z-index: 1;
+    }
+  }
+
+//Tablet V.
+  @media (min-width: 768px) {
+    .stories-right .blue-circle {
+      width: 14rem;
+      height: 14rem;
+      bottom: -3rem;
+      right: -3rem;
+    }
+  }
+
+//Desktop V.
+  @media (min-width: 992px) {
+    .stories-wrapper {
+      @include flex(row, space-between, center, 6rem);
+      padding: 6rem 8rem;
+    }
+
+    .stories-left,
+    .stories-right {
+      width: 50%;
+      order: unset;
+    }
+
+    .stories-left {
+      align-items: flex-start;
+
+      .headings {
+        text-align: left;
+        margin: 0;
+      }
+
+      .stories-list {
+        margin: 0;
+      }
+
+      .button {
+        justify-content: flex-start;
+      }
+    }
+
+    .stories-right .blue-circle {
+      width: 19.7rem;
+      height: 19.7rem;
+      bottom: -4rem;
+      right: -4rem;
+    }
+  }
+}
+
+//Dark
+body:has(#change-theme:checked) {
+  .stories {
+    background-color: $dark-theme-bg-color;
+  }
+
+  .stories h3,
+  .stories p,
+  .stories span {
+    color: $secondary-text-color;
+  }
+
+  .stories .icon {
+    background-color: $footer-logo-color;
+  }
+}
