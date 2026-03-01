@@ -138,12 +138,12 @@
       & .img1 {
         width: clamp(7.64rem, 6.7vw, 15.1rem);
         object-fit: cover;
-        height: clamp(8.9rem, 7.8vw, 17.6rem);
+        height: clamp(8.9rem, 7.7vw, 17.6rem);
         border-radius: 1.2rem;
       }
       & .img2 {
-        width: clamp(11.27rem, 9.8vw, 22.3rem);
-        height: clamp(8.9rem, 9.8vw, 17.6rem);
+        width: clamp(11.3rem, 9.8vw, 22.3rem);
+        height: clamp(8.9rem, 7.7vw, 17.6rem);
         // object-fit: cover;
         border-radius: 1.2rem;
       }

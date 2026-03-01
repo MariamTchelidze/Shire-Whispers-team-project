@@ -1,8 +1,11 @@
-# Compiled CSS
-assets/css/styles.css
-assets/css/styles.css.map
+# Compiled CSS (ALLOW for GitHub Pages)
+!assets/css/
+!assets/css/*.css
 
-# Node modules (if you use them)
+# Optional: ignore sourcemaps
+assets/css/*.css.map
+
+# Node modules
 node_modules/
 
 # OS files
