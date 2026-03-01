@@ -9,11 +9,9 @@
   pointer-events: none;
 }
 header {
-  width: clamp(27.2rem, 104.2vw, 144rem);
-  margin: 0 auto;
+  padding: 5rem 10rem;
 }
 .header-wrapper {
-  width: 100%;
   background-color: $primary-bg-color;
   @include flex(row, space-between, center);
   padding: 2rem 4rem;
@@ -71,11 +69,6 @@ header {
           @include header-navigation-fonts;
         }
         #desktop-signin {
-          &:hover {
-            background-color: $footer-logo-color;
-            transition: 0.3s linear;
-            color: $secondary-text-color;
-          }
           @include desktop-btn-styles;
         }
       }

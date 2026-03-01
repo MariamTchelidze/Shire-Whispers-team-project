@@ -1,4 +1,87 @@
 @use "../abstract/mixins" as *;
 @use "../variables" as *;
 
+// Footer Styles goes here@use "../abstract/mixins" as *;
+@use "../variables" as *;
+
 // Footer Styles goes here
+.footer {
+  width: clamp(27.2rem, 86.4vw, 124rem);
+  margin: 0 auto;
+  @include flex(row, center, center);
+
+  .wrapper {
+    width: 100%;
+    padding: 4rem 2rem;
+    @include flex(column, center, center, 2rem);
+  }
+
+  .footer-container {
+    @include flex(column, center, center, 0.4rem);
+    & .footer-left {
+      @include flex(column, center, center, 0.8rem);
+      & h3 {
+        color: $footer-logo-color;
+        font-size: 2rem;
+      }
+      p {
+        @include poppins-16-regular;
+      }
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+    }
+    & .footer-center {
+      @include flex(column, center, center, 0.8rem);
+      text-align: center;
+      .title {
+        @include poppins-16-regular;
+      }
+
+      .icons {
+        @include flex(row, center, center, 1.2rem);
+      }
+
+      .icon {
+        border: 0.1rem solid #071210;
+        @include flex(row, center, center);
+        padding: 1.2rem;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+          background-color: $main-heading-mobile-color;
+          & img {
+            filter: invert(1);
+          }
+          transition: 0.3s linear;
+        }
+      }
+    }
+    & .footer-right {
+      @include flex(column, center, center, 0.8rem);
+      flex: 1;
+      @media (min-width: 768px) {
+        text-align: right;
+      }
+      & p {
+        @include poppins-16-regular;
+      }
+    }
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+
+  .footer-bottom {
+    width: 100%;
+    border-top: 0.1rem solid $border-top;
+    padding-top: 4rem;
+
+    & p {
+      @include poppins-16-regular;
+      text-align: center;
+    }
+  }
+}

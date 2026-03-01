@@ -2,3 +2,82 @@
 @use "../variables" as *;
 
 // Subscribe Section Styles goes here
+.subscribe-forms {
+  width: clamp(27.2rem, 79.5vw, 116.1rem);
+
+  .wrapper {
+    width: clamp(24.5rem, 83.12vw, 117.6rem);
+    background-color: $secondary-bg-color;
+    text-align: center;
+    // margin: 0 auto;
+    padding: 4rem 2.6rem;
+    border-radius: 2.9rem;
+
+    @include flex(column, center, center, 2.6rem);
+    .subscribe-headings {
+      @include flex(column, center, center, 1.2rem);
+      & h2 {
+        font-family: "Poppins-Regular", sans-serif;
+        font-size: 2.8rem;
+        color: $primary-text-color;
+        @media (min-width: 768px) {
+          font-family: "Poppins-SemiBold";
+          font-size: 4.2rem;
+        }
+      }
+      & .subscribe-subtitle {
+        width: clamp(24.5rem, 56.25vw, 87.5rem);
+        font-family: "Poppins-Regular";
+        font-size: 1.6rem;
+        color: $primary-text-color;
+        @media (min-width: 768px) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+    .subscribe-form {
+      width: clamp(24.2rem, 56.5vw, 87.5rem);
+      @include flex(column, center, center, 2rem);
+      & button {
+        width: 17.5rem;
+        @include dark-theme-button;
+        &:hover {
+          background-color: $primary-bg-color;
+          color: $primary-text-color;
+          box-shadow: $absolute-box-shadow;
+          transition: 0.3s linear;
+        }
+      }
+      .row {
+        @include flex(column, center, center, 1rem);
+      }
+      .row1,
+      .row2 {
+        & input {
+          width: clamp(24.2rem, 16.9vw, 43.2rem);
+          padding: 1.2rem;
+          border-radius: 0.8rem;
+          font-family: "Poppins-Regular", sans-serif;
+          font-size: 1.6rem;
+          outline: none;
+          border: none;
+        }
+        @media (min-width: 768px) {
+          @include flex(row, center, center 2.6rem);
+        }
+      }
+      .row3 {
+        & textarea {
+          width: clamp(24.2rem, 37.3vw, 66rem);
+          padding: 2.4rem 1.9rem;
+          resize: none;
+          border-radius: 1rem;
+          outline: none;
+          border: none;
+          font-size: 1.4rem;
+          font-family: "Poppins-Regular", sans-serif;
+        }
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@
 $primary-bg-color: #ffffff;
 $dark-theme-bg-color: #1e2a39;
 $secondary-bg-color: #e8db84;
+$header-bg-color: #183b56;
 
 // font colors
 $main-heading-mobile-color: #183b56; //main heading color
@@ -19,3 +20,12 @@ $footer-logo-color: #052a44; //footer logo text color
 $video-box-shadow: 0.2rem -0.2rem 3.8rem rgba(0, 0, 0, 0.08); //This works on about us cards too
 $absolute-box-shadow: 0.181rem 0.361rem 3.434rem rgba(0, 0, 0, 0.08);
 $reviews-card-shadow: 0.2rem 0.4rem 2.8rem rgba(0, 0, 0, 0.08);
+
+// border
+$border-top: #e4d8d8;
+
+// small components
+$browser-red-dot: #ee6767;
+$browser-yellow-dot: #f6c566;
+$browser-dot-green: #5beb7b;
+$browser-bg-color: rgba(243, 243, 243, 0.6);

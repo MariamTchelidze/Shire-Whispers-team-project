@@ -1,152 +1,124 @@
-@use "../variables" as *;
 @use "../abstract/mixins" as *;
+@use "../variables" as *;
 
 .reviews {
-  background-color: $dark-theme-bg-color;
-  padding: 4rem 0;
-  text-align: center;
+  width: clamp(27.2rem, 79.5vw, 116.1rem);
+  padding: 0 2.4rem;
+  @include flex(row, center, center);
 
-  &_top {
-    max-width: 27.2rem;
-    margin: 0 auto 2.4rem;
+  .container {
+    @include flex(column, center, center, 2.6rem);
   }
 
-  &_title {
-    margin: 0 0 1.2rem;
-    font-size: 2.2rem;
-    line-height: 1.2;
-    font-family: "Poppins";
-    color: #ffffff;
-  }
+  .reviews_top {
+    @include flex(column, center, center, 2.6rem);
 
-  &_subtitle {
-    margin: 0;
-    font-size: 1.6rem;
-    line-height: 1.6;
-    color: #ffffff;
-  }
-
-  &_grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.6rem;
-    justify-items: center;
-    margin-top: 2.4rem;
-  }
-
-  &_actions {
-    margin-top: 2.4rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  &_btn {
-    @include dark-theme-button;
-    color: #fff;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 2.4rem;
-  }
-}
-
-.review_card {
-  width: min(100%, 28rem);
-  background-color: #ffffff;
-  border-radius: 1.2rem;
-  padding: 1.8rem;
-  box-shadow: $reviews-card-shadow;
-  text-align: center;
-
-  &_top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1.2rem;
-  }
-
-  &_photo {
-    width: 4.8rem;
-    height: 4.8rem;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  &_meta {
-    text-align: left;
-  }
-
-  &_name {
-    margin: 0;
-    font-size: 1.4rem;
-    line-height: 1.2;
-    color: #111;
-  }
-
-  &_role {
-    margin: 0.2rem 0 0;
-    font-size: 1.2rem;
-    color: #6b6b6b;
-  }
-
-  &_text {
-    margin: 0;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #333;
-  }
-}
-
-//tablet V.
-@media (min-width: 48rem) {
-  .reviews {
-    padding: 7rem 0;
-
-    &_top {
-      max-width: 60rem;
-      margin-bottom: 3.2rem;
+    h2 {
+      font-family: "Poppins-Regular", sans-serif;
+      font-size: 2.8rem;
+      text-align: center;
+      color: $main-heading-mobile-color;
+      @media (min-width: 768px) {
+        color: $primary-text-color;
+        font-size: 4.2rem;
+      }
     }
 
-    &_title {
-      font-size: 2.6rem;
-    }
+    p {
+      width: 27.2rem;
+      text-align: center;
+      @include poppins-16-regular;
 
-    &_grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 2rem;
-      justify-items: stretch;
+      @media (min-width: 768px) {
+        width: 35rem;
+        font-size: 1.8rem;
+      }
+
+      @media (min-width: 992px) {
+        width: 100%;
+      }
     }
+  }
+  .reviews_grid {
+    @include grid-wrapper;
   }
 
   .review_card {
-    width: 100%;
-    text-align: left;
+    padding: 3.6rem 2.2rem;
+    @include flex(column, center, center, 1rem);
+    max-width: 30rem;
+    box-shadow: $absolute-box-shadow;
+    border-radius: 1.2rem;
+    background-color: $primary-bg-color;
+    margin: 0 auto;
 
-    &_top {
-      justify-content: flex-start;
+    .review_card_top {
+      @include flex(row, center, center, 1rem);
+
+      @media (min-width: 768px) {
+        justify-content: flex-start;
+      }
+    }
+    .review_card_photo {
+      width: 4.8rem;
+      height: 4.8rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .review_card_meta {
+      text-align: left;
+
+      h4 {
+        @include jakarta-18-semibold;
+      }
+      .review_card_role {
+        @include poppins-16-regular;
+        font-size: 1.2rem;
+        opacity: 0.7;
+      }
+    }
+
+    .review_card_text {
+      text-align: center;
+      @include poppins-16-regular;
+      font-size: 1.4rem;
+    }
+  }
+  .reviews_actions {
+    @include flex(row, center, center);
+    .reviews_btn {
+      @include dark-theme-button;
+    }
+  }
+  .reviews_navigation {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .reviews_actions {
+      display: none;
+    }
+    .reviews_navigation {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      .reviews_arrow {
+        @include transparent-btn-styles;
+        padding: 2.2rem 1.8rem;
+        border-radius: 1rem;
+        border: none;
+        &:hover {
+          color: $primary-bg-color;
+          background-color: $footer-logo-color;
+          transition: 0.3s linear;
+          & img {
+            filter: invert(1);
+          }
+        }
+        cursor: pointer;
+        @include flex(row, center, center);
+      }
     }
   }
 }
-//computer V.
-@media (min-width: 64rem) {
-  .reviews {
-    &_title {
-      font-size: 3.2rem;
-    }
-
-    &_grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 3rem;
-    }
-  }
-}
-
-// <<<<<<< HEAD
-// // Reviews section styles goes here
-// .reviews {
-//   background-color: $primary-bg-color;
-// }
-// =======
-// >>>>>>> origin/main

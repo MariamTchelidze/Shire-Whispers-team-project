@@ -73,3 +73,72 @@ body:has(#change-theme:checked) {
     background-size: contain;
   }
 }
+body:has(#change-theme:checked) {
+  .our-services {
+    background-color: $dark-theme-bg-color;
+  }
+
+  .our-services h3,
+  .our-services p,
+  .our-services span {
+    color: $secondary-text-color;
+  }
+
+  .our-services .icon {
+    background-color: $footer-logo-color;
+    & img {
+      filter: invert(1);
+    }
+  }
+}
+
+// stories section: Dark & light mode controller
+body:has(#change-theme:checked) {
+  .stories {
+    background-color: $dark-theme-bg-color;
+  }
+
+  .stories h3,
+  .stories p,
+  .stories span {
+    color: $secondary-text-color;
+  }
+
+  .stories .icon {
+    background-color: $footer-logo-color;
+    & img {
+      filter: invert(1);
+    }
+  }
+}
+
+// Reviews section: Dark & light mode controller
+body:has(#change-theme:checked) {
+  .reviews {
+    .reviews_actions {
+      .reviews_btn {
+        background-color: $primary-bg-color;
+        color: $primary-text-color;
+      }
+    }
+    .reviews_title {
+      color: $secondary-text-color;
+    }
+    .reviews_subtitle {
+      color: $secondary-text-color;
+    }
+  }
+}
+
+// Footer section: Dark & light mode controller
+body:has(#change-theme:checked) {
+  footer {
+    & h3,
+    & p {
+      color: $secondary-text-color;
+    }
+    & img {
+      filter: invert(1);
+    }
+  }
+}

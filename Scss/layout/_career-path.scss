@@ -2,11 +2,20 @@
 @use "../variables" as *;
 
 // career path section
+.career-path {
+  width: clamp(27.2rem, 86.4vw, 124rem);
+}
 .career-path-wrapper {
+  width: clamp(27.2rem, 86.4vw, 124rem);
   margin-top: 3rem;
-  @include career-path-responsive;
+  @include flex(column, center, center, 2.6rem);
+  @media (min-width: 768px) {
+    @include flex(row, space-between, center, 4rem);
+  }
 
   .text-buttons {
+    width: clamp(27.2rem, 27.4vw, 57.9rem);
+    height: clamp(25rem, 17.9vw, 45rem);
     & .heading-div {
       @include flex(column, center, center, 1.6rem);
       & h2 {
@@ -20,11 +29,14 @@
       & p {
         font-family: "Poppins-Regular", sans-serif;
         font-size: 1.6rem;
+        text-align: center;
         color: $primary-text-color;
         text-wrap: wrap;
-        max-width: 27.2rem;
-        width: 100%;
-        text-align: center;
+        width: clamp(27.2rem, 27.4vw, 57.9rem);
+        @media (min-width: 768px) {
+          text-align: left;
+          text-align: left;
+        }
       }
       & .button-wrapper {
         @include flex(row, center, center, 1.6rem);
@@ -54,16 +66,15 @@
         }
       }
       .images-text {
-        @include flex(row, center, center);
+        @include flex(row, start, center);
         & .images-container {
-          @include flex(row, center, center);
+          @include flex(row, flex-start, center);
           & p {
             font-family: "Poppins-Medium";
             font-size: 1.3rem;
             color: $primary-text-color;
-            margin-left: 2rem;
           }
-          img {
+          & img {
             object-fit: cover;
             position: relative;
             border: 1px solid $primary-bg-color;
@@ -75,7 +86,7 @@
         }
         display: none;
         @media (min-width: 768px) {
-          display: block;
+          display: flex;
         }
       }
     }
@@ -83,11 +94,8 @@
       .heading-div {
         @include flex(column, start, start);
         .heading-div {
-          & h2,
-          & p {
+          & h2 {
             text-align: left;
-            max-width: 57rem;
-            width: 100%;
             text-align: left;
           }
         }
@@ -96,30 +104,31 @@
   }
 
   .model-div {
-    width: 100%;
-    @include flex(row, center, center);
     position: relative;
+    @include flex(row, center, center);
+    width: clamp(21.8rem, 35.1vw, 50.6rem);
+    height: clamp(17.6rem, 20.7vw, 40.8rem);
+    background-color: $secondary-bg-color;
+    border-radius: 0.8rem;
+    padding: 10rem 10rem;
     .bg-colored-div {
-      background-color: $secondary-bg-color;
-      border-radius: 0.8rem;
-      padding: 10rem 10rem;
       & img {
         position: absolute;
-        right: 3rem;
-        bottom: 1.5rem;
-        height: 110%;
+        right: 0;
+        bottom: 0;
+        height: 100%;
       }
-      width: 30rem;
-      height: 22rem;
     }
     .column-absolute-cards {
       position: absolute;
-      left: -2rem;
+      left: -6rem;
       top: 1rem;
       @include flex(column, center, center, 0.8rem);
       .absolute-card {
         @include flex(column, center, center, 0.5rem);
-        padding: 0.8rem 1.6rem;
+        width: clamp(8rem, 12vw, 14.3rem);
+        height: clamp(4.8rem, 5.7vw, 11.2rem);
+        padding: 0.8rem;
         border-radius: 0.6rem;
         background-color: $primary-bg-color;
         box-shadow: $absolute-box-shadow;
@@ -129,25 +138,36 @@
           border-radius: 5rem;
         }
         & h5 {
-          @include jakarta-10-semibold;
+          font-family: "PlusJakartaSans-SemiBold";
+          font-size: 0.8rem;
+          white-space: nowrap;
+          @media (min-width: 992px) {
+            font-size: 1.6rem;
+          }
         }
         & p {
           font-family: "PlusJakartaSans-SemiBold";
           font-size: 1rem;
+          color: $career-path-card-text-color;
+          white-space: nowrap;
+          @media (min-width: 992px) {
+            font-size: 1.2rem;
+          }
         }
       }
       .card2,
       .card3 {
-        align-items: center;
         .images-div {
           @include flex(row, start, center);
           img {
-            object-fit: cover;
+            width: clamp(0.9rem, 1.2vw, 2.2rem);
+            height: clamp(0.9rem, 1.2vw, 2.2rem);
+            // object-fit: cover;
             position: relative;
             border: 1px solid $primary-bg-color;
             border-radius: 5rem;
             &:not(:first-child) {
-              margin-left: -1rem;
+              margin-left: -0.5rem;
             }
           }
         }
