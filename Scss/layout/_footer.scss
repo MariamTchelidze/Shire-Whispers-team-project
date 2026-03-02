@@ -17,7 +17,7 @@
   }
 
   .footer-container {
-    @include flex(column, center, center, 0.4rem);
+    @include flex(column, center, center, 2.6rem);
     & .footer-left {
       @include flex(column, center, center, 0.8rem);
       & h3 {

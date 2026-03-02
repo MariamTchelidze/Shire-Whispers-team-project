@@ -81,7 +81,7 @@ body:has(#change-theme:checked) {
   .our-services h3,
   .our-services p,
   .our-services span {
-    color: $secondary-text-color;
+    color: $main-heading-mobile-color;
   }
 
   .our-services .icon {
@@ -101,7 +101,7 @@ body:has(#change-theme:checked) {
   .stories h3,
   .stories p,
   .stories span {
-    color: $secondary-text-color;
+    color: $main-heading-mobile-color;
   }
 
   .stories .icon {

@@ -78,7 +78,7 @@
 }
 
 // About-us Grid mixin
-@mixin au-cards-wrapper($gap: 2.6rem, $two-columns: 2, $three-columns: 3) {
+@mixin grid-wrapper($gap: 2.6rem, $two-columns: 2, $three-columns: 3) {
   display: grid;
   gap: $gap;
   grid-template-columns: 1fr;

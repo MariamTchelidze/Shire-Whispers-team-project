@@ -12,6 +12,7 @@
 html,
 body {
   height: 100%;
+  white-space: nowrap;
 }
 
 img,
@@ -154,7 +155,7 @@ body:has(#change-theme:checked) .our-services {
 body:has(#change-theme:checked) .our-services h3,
 body:has(#change-theme:checked) .our-services p,
 body:has(#change-theme:checked) .our-services span {
-  color: #ffffff;
+  color: #183b56;
 }
 body:has(#change-theme:checked) .our-services .icon {
   background-color: #052a44;
@@ -169,7 +170,7 @@ body:has(#change-theme:checked) .stories {
 body:has(#change-theme:checked) .stories h3,
 body:has(#change-theme:checked) .stories p,
 body:has(#change-theme:checked) .stories span {
-  color: #ffffff;
+  color: #183b56;
 }
 body:has(#change-theme:checked) .stories .icon {
   background-color: #052a44;
@@ -291,7 +292,7 @@ header {
     font-family: "Poppins-SemiBold", sans-serif;
     font-size: 1.6rem;
     color: #000000;
-    padding: 1.5rem 2.6rem;
+    padding: 1.5rem 4.5rem;
     border-radius: 0.8rem;
     white-space: nowrap;
   }
@@ -374,12 +375,12 @@ header {
   text-transform: capitalize;
 }
 #menu-toggle:checked ~ .burger-menu .bm-nav .sign-in-toggle #signin {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.4rem;
   background-color: #052a44;
-  padding: 1.5rem 2.6rem;
+  padding: 1.5rem 3.6rem;
   border-radius: 0.8rem;
   color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
 }
 
 #menu-toggle:checked + .bureger-label .burger-bar {
@@ -455,12 +456,12 @@ header {
   gap: 1.6rem;
 }
 .career-path-wrapper .text-buttons .heading-div .button-wrapper .start {
+  background-color: #ffffff;
   font-size: 1.4rem;
   font-family: "Poppins-Medium", sans-serif;
+  color: #000000;
   padding: 1.5rem 2.6rem;
   border-radius: 0.8rem;
-  background-color: #ffffff;
-  color: #000000;
   box-shadow: 0.181rem 0.361rem 3.434rem rgba(0, 0, 0, 0.08);
 }
 .career-path-wrapper .text-buttons .heading-div .button-wrapper .start:hover {
@@ -489,12 +490,12 @@ header {
   transition: 0.3s linear;
 }
 .career-path-wrapper .text-buttons .heading-div .button-wrapper .learn-more {
+  background-color: #ffffff;
   font-size: 1.4rem;
   font-family: "Poppins-Medium", sans-serif;
+  color: #000000;
   padding: 1.5rem 2.6rem;
   border-radius: 0.8rem;
-  background-color: #ffffff;
-  color: #000000;
   box-shadow: 0.181rem 0.361rem 3.434rem rgba(0, 0, 0, 0.08);
 }
 .career-path-wrapper .text-buttons .heading-div .button-wrapper .learn-more:hover {
@@ -684,7 +685,7 @@ header {
   font-size: 1.6rem;
   color: #000000;
 }
-.about-us .about-us-wrapper .au-cards-wrapper::before {
+.about-us .about-us-wrapper .grid-wrapper::before {
   content: "";
   position: absolute;
   width: 8rem;
@@ -764,12 +765,12 @@ header {
   align-items: center;
 }
 .about-us .about-us-wrapper .button button {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.4rem;
   background-color: #052a44;
-  padding: 1.5rem 2.6rem;
+  padding: 1.5rem 3.6rem;
   border-radius: 0.8rem;
   color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
 }
 .about-us .about-us-wrapper .button button:hover {
   background-color: #ffffff;
@@ -846,6 +847,7 @@ header {
   font-family: "Poppins-Regular", sans-serif;
   font-size: 1.6rem;
   color: #000000;
+  text-wrap: wrap;
 }
 @media (min-width: 768px) {
   .our-services .our-services-right .headings p {
@@ -887,12 +889,12 @@ header {
   align-items: center;
 }
 .our-services .our-services-right .button-div button {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.4rem;
   background-color: #052a44;
-  padding: 1.5rem 2.6rem;
+  padding: 1.5rem 3.6rem;
   border-radius: 0.8rem;
   color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
 }
 .our-services .our-services-right .button-div button:hover {
   background-color: #ffffff;
@@ -959,13 +961,12 @@ header {
 .our-services .our-services-left .image-row .img1 {
   width: clamp(7.64rem, 6.7vw, 15.1rem);
   object-fit: cover;
-  height: clamp(8.9rem, 7.8vw, 17.6rem);
+  height: clamp(8.9rem, 7.7vw, 17.6rem);
   border-radius: 1.2rem;
 }
 .our-services .our-services-left .image-row .img2 {
-  width: clamp(11.27rem, 9.8vw, 22.3rem);
-  height: clamp(8.9rem, 9.8vw, 17.6rem);
-  object-fit: cover;
+  width: clamp(11.3rem, 9.8vw, 22.3rem);
+  height: clamp(8.9rem, 7.7vw, 17.6rem);
   border-radius: 1.2rem;
 }
 .our-services .our-services-left .blue-circle {
@@ -1021,8 +1022,10 @@ header {
 }
 @media (min-width: 768px) {
   .stories .stories-wrapper {
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
   }
 }
 .stories .stories-left {
@@ -1033,6 +1036,7 @@ header {
   gap: 3rem;
 }
 .stories .stories-left .headings {
+  width: clamp(25.2rem, 23.5vw, 51.5rem);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1056,16 +1060,19 @@ header {
 @media (min-width: 762px) {
   .stories .stories-left .headings h3 {
     font-size: 4.2rem;
+    text-align: left;
   }
 }
 .stories .stories-left .headings p {
   font-family: "Poppins-Regular", sans-serif;
   font-size: 1.6rem;
   color: #000000;
+  white-space: wrap;
 }
 @media (min-width: 768px) {
   .stories .stories-left .headings p {
     font-size: 1.8rem;
+    width: clamp(25.2rem, 23.5vw, 51.5rem);
   }
 }
 .stories .stories-left .stories-list {
@@ -1103,12 +1110,12 @@ header {
   align-items: center;
 }
 .stories .stories-left .button-div button {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.4rem;
   background-color: #052a44;
-  padding: 1.5rem 2.6rem;
+  padding: 1.5rem 3.6rem;
   border-radius: 0.8rem;
   color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
 }
 .stories .stories-left .button-div button:hover {
   background-color: #ffffff;
@@ -1224,6 +1231,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 2.6rem;
+  width: 100%;
 }
 .reviews .reviews_top h2 {
   font-family: "Poppins-Regular", sans-serif;
@@ -1238,21 +1246,17 @@ header {
   }
 }
 .reviews .reviews_top p {
-  width: 27.2rem;
   text-align: center;
   font-family: "Poppins-Regular", sans-serif;
   font-size: 1.6rem;
   color: #000000;
+  text-wrap: wrap;
 }
 @media (min-width: 768px) {
   .reviews .reviews_top p {
     width: 35rem;
     font-size: 1.8rem;
-  }
-}
-@media (min-width: 992px) {
-  .reviews .reviews_top p {
-    width: 100%;
+    text-wrap: wrap;
   }
 }
 .reviews .reviews_grid {
@@ -1332,6 +1336,7 @@ header {
   font-size: 1.6rem;
   color: #000000;
   font-size: 1.4rem;
+  text-wrap: wrap;
 }
 .reviews .reviews_actions {
   display: flex;
@@ -1340,12 +1345,12 @@ header {
   align-items: center;
 }
 .reviews .reviews_actions .reviews_btn {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.4rem;
   background-color: #052a44;
-  padding: 1.5rem 2.6rem;
+  padding: 1.5rem 3.6rem;
   border-radius: 0.8rem;
   color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
 }
 .reviews .reviews_navigation {
   display: none;
@@ -1361,12 +1366,12 @@ header {
     margin-top: 2rem;
   }
   .reviews .reviews_navigation .reviews_arrow {
+    background-color: #ffffff;
     font-size: 1.4rem;
     font-family: "Poppins-Medium", sans-serif;
+    color: #000000;
     padding: 1.5rem 2.6rem;
     border-radius: 0.8rem;
-    background-color: #ffffff;
-    color: #000000;
     box-shadow: 0.181rem 0.361rem 3.434rem rgba(0, 0, 0, 0.08);
     padding: 2.2rem 1.8rem;
     border-radius: 1rem;
@@ -1396,7 +1401,7 @@ header {
   width: clamp(24.5rem, 83.12vw, 117.6rem);
   background-color: #e8db84;
   text-align: center;
-  padding: 4rem 2.6rem;
+  padding: 2.4rem 1.3rem;
   border-radius: 2.9rem;
   display: flex;
   flex-direction: column;
@@ -1405,6 +1410,7 @@ header {
   gap: 2.6rem;
 }
 .subscribe-forms .wrapper .subscribe-headings {
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1415,6 +1421,7 @@ header {
   font-family: "Poppins-Regular", sans-serif;
   font-size: 2.8rem;
   color: #000000;
+  text-wrap: wrap;
 }
 @media (min-width: 768px) {
   .subscribe-forms .wrapper .subscribe-headings h2 {
@@ -1422,14 +1429,15 @@ header {
     font-size: 4.2rem;
   }
 }
-.subscribe-forms .wrapper .subscribe-headings .subscribe-subtitle {
+.subscribe-forms .wrapper .subscribe-headings p {
   width: clamp(24.5rem, 56.25vw, 87.5rem);
   font-family: "Poppins-Regular";
   font-size: 1.6rem;
   color: #000000;
+  text-wrap: wrap;
 }
 @media (min-width: 768px) {
-  .subscribe-forms .wrapper .subscribe-headings .subscribe-subtitle {
+  .subscribe-forms .wrapper .subscribe-headings p {
     font-size: 1.8rem;
   }
 }
@@ -1443,12 +1451,12 @@ header {
 }
 .subscribe-forms .wrapper .subscribe-form button {
   width: 17.5rem;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.4rem;
   background-color: #052a44;
-  padding: 1.5rem 2.6rem;
+  padding: 1.5rem 3.6rem;
   border-radius: 0.8rem;
   color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
 }
 .subscribe-forms .wrapper .subscribe-form button:hover {
   background-color: #ffffff;
@@ -1515,7 +1523,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.4rem;
+  gap: 2.6rem;
 }
 .footer .footer-container .footer-left {
   display: flex;
@@ -1631,7 +1639,6 @@ main {
   justify-content: center;
   align-items: center;
   gap: 6.4rem;
-  margin-bottom: 4rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

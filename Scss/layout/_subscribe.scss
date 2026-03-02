@@ -9,27 +9,29 @@
     width: clamp(24.5rem, 83.12vw, 117.6rem);
     background-color: $secondary-bg-color;
     text-align: center;
-    // margin: 0 auto;
-    padding: 4rem 2.6rem;
+    padding: 2.4rem 1.3rem;
     border-radius: 2.9rem;
 
     @include flex(column, center, center, 2.6rem);
     .subscribe-headings {
+      text-align: center;
       @include flex(column, center, center, 1.2rem);
       & h2 {
         font-family: "Poppins-Regular", sans-serif;
         font-size: 2.8rem;
         color: $primary-text-color;
+        text-wrap: wrap;
         @media (min-width: 768px) {
           font-family: "Poppins-SemiBold";
           font-size: 4.2rem;
         }
       }
-      & .subscribe-subtitle {
+      & p {
         width: clamp(24.5rem, 56.25vw, 87.5rem);
         font-family: "Poppins-Regular";
         font-size: 1.6rem;
         color: $primary-text-color;
+        text-wrap: wrap;
         @media (min-width: 768px) {
           font-size: 1.8rem;
         }

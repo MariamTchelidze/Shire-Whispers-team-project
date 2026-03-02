@@ -50,7 +50,8 @@
         & .play-btn {
           @include play-btn;
           &:hover {
-            @include hover-for-light-btn;
+            background-color: #052a44;
+            color: $primary-bg-color;
             & img {
               filter: invert(1);
             }
