@@ -48,7 +48,7 @@
 // play -video button styles
 @mixin play-btn {
   background-color: $primary-bg-color;
-  padding: 1.5rem;
+  padding: 1.6rem;
   border-radius: 5rem;
   @include flex(row, center, center);
   box-shadow: $video-box-shadow;

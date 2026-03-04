@@ -48,6 +48,7 @@
           }
         }
         & .play-btn {
+          flex-shrink: 0;
           @include play-btn;
           &:hover {
             background-color: #052a44;
@@ -55,6 +56,10 @@
             & img {
               filter: brightness(0) invert(1);
             }
+            // & img {
+            //   height: 1.6rem;
+            //   width: 1.6rem;
+            // }
             transition: 0.3s linear;
           }
         }

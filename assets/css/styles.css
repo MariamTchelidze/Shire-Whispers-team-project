@@ -488,8 +488,9 @@ header {
   transition: 0.3s ease-in-out;
 }
 .career-path-wrapper .text-buttons .heading-div .button-wrapper .play-btn {
+  flex-shrink: 0;
   background-color: #ffffff;
-  padding: 1.5rem;
+  padding: 1.6rem;
   border-radius: 5rem;
   display: flex;
   flex-direction: row;
