@@ -117,7 +117,10 @@ body:has(#change-theme:checked) .header-wrapper .header-right-wrapper .light-the
   display: none;
 }
 body:has(#change-theme:checked) .header-wrapper .header-right-wrapper .burger-bar {
-  filter: invert(1);
+  filter: brightness(0) invert(1);
+}
+body:has(#change-theme:checked) .header-wrapper .header-right-wrapper .close-btn {
+  filter: brightness(0) invert(1);
 }
 body:has(#change-theme:checked) .header-wrapper .header-right-wrapper .burger-menu {
   background-color: #1e2a39;

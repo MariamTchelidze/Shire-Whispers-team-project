@@ -29,7 +29,10 @@ body:has(#change-theme:checked) {
       }
 
       .burger-bar {
-        filter: invert(1);
+        filter: brightness(0) invert(1);
+      }
+      .close-btn {
+        filter: brightness(0) invert(1);
       }
       .burger-menu {
         background-color: $dark-theme-bg-color;
