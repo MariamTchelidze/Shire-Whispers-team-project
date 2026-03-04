@@ -143,9 +143,9 @@
         border-radius: 1.2rem;
       }
       & .img2 {
-        width: clamp(11.27rem, 9.8vw, 22.3rem);
-        height: clamp(8.9rem, 9.8vw, 17.6rem);
-        object-fit: cover;
+        width: clamp(11.3rem, 9.8vw, 22.3rem);
+        height: clamp(8.9rem, 7.7vw, 17.6rem);
+        // object-fit: cover;
         border-radius: 1.2rem;
       }
     }

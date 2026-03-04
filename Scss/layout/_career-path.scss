@@ -53,7 +53,7 @@
             background-color: #052a44;
             color: $primary-bg-color;
             & img {
-              filter: invert(1);
+              filter: brightness(0) invert(1);
             }
             transition: 0.3s linear;
           }

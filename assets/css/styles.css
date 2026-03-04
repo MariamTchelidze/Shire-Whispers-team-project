@@ -161,7 +161,7 @@ body:has(#change-theme:checked) .our-services .icon {
   background-color: #052a44;
 }
 body:has(#change-theme:checked) .our-services .icon img {
-  filter: invert(1);
+  filter: brightness(0) invert(1);
 }
 
 body:has(#change-theme:checked) .stories {
@@ -176,7 +176,7 @@ body:has(#change-theme:checked) .stories .icon {
   background-color: #052a44;
 }
 body:has(#change-theme:checked) .stories .icon img {
-  filter: invert(1);
+  filter: brightness(0) invert(1);
 }
 
 body:has(#change-theme:checked) .reviews .reviews_actions .reviews_btn {
@@ -391,6 +391,24 @@ header {
   cursor: pointer;
 }
 
+.desktop-nav .list-a {
+  position: relative;
+  text-decoration: none;
+}
+.desktop-nav .list-a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.4rem;
+  width: 0;
+  height: 0.3rem;
+  background: linear-gradient(to right, #e8db84 25%, #ffffff 100%);
+  transition: width 0.5s ease;
+}
+.desktop-nav .list-a:hover::after {
+  width: 100%;
+}
+
 .career-path {
   width: clamp(27.2rem, 86.4vw, 124rem);
 }
@@ -484,7 +502,7 @@ header {
   color: #ffffff;
 }
 .career-path-wrapper .text-buttons .heading-div .button-wrapper .play-btn:hover img {
-  filter: invert(1);
+  filter: brightness(0) invert(1);
 }
 .career-path-wrapper .text-buttons .heading-div .button-wrapper .play-btn:hover {
   transition: 0.3s linear;
@@ -1186,9 +1204,8 @@ header {
   border-radius: 1.2rem;
 }
 .stories .stories-right .image-row .img2 {
-  width: clamp(11.27rem, 9.8vw, 22.3rem);
-  height: clamp(8.9rem, 9.8vw, 17.6rem);
-  object-fit: cover;
+  width: clamp(11.3rem, 9.8vw, 22.3rem);
+  height: clamp(8.9rem, 7.7vw, 17.6rem);
   border-radius: 1.2rem;
 }
 .stories .stories-right .blue-circle {
@@ -1231,12 +1248,13 @@ header {
   justify-content: center;
   align-items: center;
   gap: 2.6rem;
-  width: 100%;
+  width: clamp(27.2rem, 79.5vw, 116.1rem);
 }
 .reviews .reviews_top h2 {
   font-family: "Poppins-Regular", sans-serif;
   font-size: 2.8rem;
   text-align: center;
+  text-wrap: wrap;
   color: #183b56;
 }
 @media (min-width: 768px) {
@@ -1383,7 +1401,7 @@ header {
     transition: 0.3s linear;
   }
   .reviews .reviews_navigation .reviews_arrow:hover img {
-    filter: invert(1);
+    filter: brightness(0) invert(1);
   }
   .reviews .reviews_navigation .reviews_arrow {
     cursor: pointer;
@@ -1580,7 +1598,7 @@ header {
   background-color: #183b56;
 }
 .footer .footer-container .footer-center .icon:hover img {
-  filter: invert(1);
+  filter: brightness(0) invert(1);
 }
 .footer .footer-container .footer-center .icon:hover {
   transition: 0.3s linear;

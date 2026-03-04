@@ -87,7 +87,7 @@ body:has(#change-theme:checked) {
   .our-services .icon {
     background-color: $footer-logo-color;
     & img {
-      filter: invert(1);
+      filter: brightness(0) invert(1);
     }
   }
 }
@@ -107,7 +107,7 @@ body:has(#change-theme:checked) {
   .stories .icon {
     background-color: $footer-logo-color;
     & img {
-      filter: invert(1);
+      filter: brightness(0) invert(1);
     }
   }
 }
